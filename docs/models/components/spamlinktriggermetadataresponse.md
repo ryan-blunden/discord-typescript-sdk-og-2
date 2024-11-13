@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SpamLinkTriggerMetadataResponse } from "@ryan-blunden/discord/models/components";
+import { SpamLinkTriggerMetadataResponse } from "@ryan.blunden/discord/models/components";
 
 let value: SpamLinkTriggerMetadataResponse = {};
 ```

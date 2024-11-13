@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RoleSelect } from "@ryan-blunden/discord/models/components";
+import { RoleSelect } from "@ryan.blunden/discord/models/components";
 
 let value: RoleSelect = {
   customId: "<id>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CommandPermissionResponse } from "@ryan-blunden/discord/models/components";
+import { CommandPermissionResponse } from "@ryan.blunden/discord/models/components";
 
 let value: CommandPermissionResponse = {
   id: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UploadApplicationAttachmentRequestBody } from "@ryan-blunden/discord/models/operations";
+import { UploadApplicationAttachmentRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: UploadApplicationAttachmentRequestBody = {
   file: "<value>",

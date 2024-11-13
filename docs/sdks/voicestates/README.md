@@ -14,7 +14,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -37,8 +37,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildsVoiceStatesGetSelf } from "@ryan-blunden/discord/funcs/guildsVoiceStatesGetSelf.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildsVoiceStatesGetSelf } from "@ryan.blunden/discord/funcs/guildsVoiceStatesGetSelf.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -89,7 +89,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -112,8 +112,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildsVoiceStatesUpdateSelf } from "@ryan-blunden/discord/funcs/guildsVoiceStatesUpdateSelf.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildsVoiceStatesUpdateSelf } from "@ryan.blunden/discord/funcs/guildsVoiceStatesUpdateSelf.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -164,7 +164,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -188,8 +188,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildsVoiceStatesUpdate } from "@ryan-blunden/discord/funcs/guildsVoiceStatesUpdate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildsVoiceStatesUpdate } from "@ryan.blunden/discord/funcs/guildsVoiceStatesUpdate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AddGuildMemberRequestBody } from "@ryan-blunden/discord/models/operations";
+import { AddGuildMemberRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: AddGuildMemberRequestBody = {
   accessToken: "<value>",

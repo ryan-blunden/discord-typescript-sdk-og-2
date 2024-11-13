@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MessageReactionCountDetailsResponse } from "@ryan-blunden/discord/models/components";
+import { MessageReactionCountDetailsResponse } from "@ryan.blunden/discord/models/components";
 
 let value: MessageReactionCountDetailsResponse = {
   burst: 106118,

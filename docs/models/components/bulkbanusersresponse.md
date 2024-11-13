@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BulkBanUsersResponse } from "@ryan-blunden/discord/models/components";
+import { BulkBanUsersResponse } from "@ryan.blunden/discord/models/components";
 
 let value: BulkBanUsersResponse = {
   bannedUsers: [

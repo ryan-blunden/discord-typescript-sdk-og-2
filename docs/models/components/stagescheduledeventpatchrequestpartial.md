@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { StageScheduledEventPatchRequestPartial } from "@ryan-blunden/discord/models/components";
+import { StageScheduledEventPatchRequestPartial } from "@ryan.blunden/discord/models/components";
 
 let value: StageScheduledEventPatchRequestPartial = {};
 ```

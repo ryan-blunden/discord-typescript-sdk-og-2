@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BotAccountPatchRequest } from "@ryan-blunden/discord/models/components";
+import { BotAccountPatchRequest } from "@ryan.blunden/discord/models/components";
 
 let value: BotAccountPatchRequest = {
   username: "Marietta_Leuschke99",

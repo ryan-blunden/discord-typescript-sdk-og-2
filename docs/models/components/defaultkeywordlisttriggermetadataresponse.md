@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DefaultKeywordListTriggerMetadataResponse } from "@ryan-blunden/discord/models/components";
+import { DefaultKeywordListTriggerMetadataResponse } from "@ryan.blunden/discord/models/components";
 
 let value: DefaultKeywordListTriggerMetadataResponse = {
   allowList: [

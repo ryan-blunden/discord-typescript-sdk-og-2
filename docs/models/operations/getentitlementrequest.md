@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEntitlementRequest } from "@ryan-blunden/discord/models/operations";
+import { GetEntitlementRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: GetEntitlementRequest = {
   applicationId: "<value>",

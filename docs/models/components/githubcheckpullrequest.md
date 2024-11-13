@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GithubCheckPullRequest } from "@ryan-blunden/discord/models/components";
+import { GithubCheckPullRequest } from "@ryan.blunden/discord/models/components";
 
 let value: GithubCheckPullRequest = {
   number: 958907,

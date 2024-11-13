@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GatewayResponse } from "@ryan-blunden/discord/models/components";
+import { GatewayResponse } from "@ryan.blunden/discord/models/components";
 
 let value: GatewayResponse = {
   url: "https://chubby-duffel.name",

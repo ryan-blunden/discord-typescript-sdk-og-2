@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateWebhookMessageMultipartRequest } from "@ryan-blunden/discord/models/operations";
+import { UpdateWebhookMessageMultipartRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: UpdateWebhookMessageMultipartRequest = {
   webhookId: "<value>",

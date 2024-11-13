@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DefaultKeywordListUpsertRequest } from "@ryan-blunden/discord/models/components";
+import { DefaultKeywordListUpsertRequest } from "@ryan.blunden/discord/models/components";
 
 let value: DefaultKeywordListUpsertRequest = {
   name: "<value>",

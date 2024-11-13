@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UserSelectDefaultValueResponse } from "@ryan-blunden/discord/models/components";
+import { UserSelectDefaultValueResponse } from "@ryan.blunden/discord/models/components";
 
 let value: UserSelectDefaultValueResponse = {
   id: "<value>",

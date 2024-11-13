@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SetGuildMfaLevelRequestBody } from "@ryan-blunden/discord/models/operations";
+import { SetGuildMfaLevelRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: SetGuildMfaLevelRequestBody = {};
 ```

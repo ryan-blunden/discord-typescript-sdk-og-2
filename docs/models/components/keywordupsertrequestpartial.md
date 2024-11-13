@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { KeywordUpsertRequestPartial } from "@ryan-blunden/discord/models/components";
+import { KeywordUpsertRequestPartial } from "@ryan.blunden/discord/models/components";
 
 let value: KeywordUpsertRequestPartial = {};
 ```

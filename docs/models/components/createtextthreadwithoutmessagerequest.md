@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateTextThreadWithoutMessageRequest } from "@ryan-blunden/discord/models/components";
+import { CreateTextThreadWithoutMessageRequest } from "@ryan.blunden/discord/models/components";
 
 let value: CreateTextThreadWithoutMessageRequest = {
   name: "<value>",

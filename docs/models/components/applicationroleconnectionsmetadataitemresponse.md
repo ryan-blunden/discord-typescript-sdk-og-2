@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApplicationRoleConnectionsMetadataItemResponse } from "@ryan-blunden/discord/models/components";
+import { ApplicationRoleConnectionsMetadataItemResponse } from "@ryan.blunden/discord/models/components";
 
 let value: ApplicationRoleConnectionsMetadataItemResponse = {
   key: "<key>",

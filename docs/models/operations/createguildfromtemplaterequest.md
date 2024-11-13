@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateGuildFromTemplateRequest } from "@ryan-blunden/discord/models/operations";
+import { CreateGuildFromTemplateRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: CreateGuildFromTemplateRequest = {
   code: "<value>",

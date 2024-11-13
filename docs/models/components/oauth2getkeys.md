@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OAuth2GetKeys } from "@ryan-blunden/discord/models/components";
+import { OAuth2GetKeys } from "@ryan.blunden/discord/models/components";
 
 let value: OAuth2GetKeys = {
   keys: [

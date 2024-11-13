@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RichEmbedField } from "@ryan-blunden/discord/models/components";
+import { RichEmbedField } from "@ryan.blunden/discord/models/components";
 
 let value: RichEmbedField = {
   name: "<value>",

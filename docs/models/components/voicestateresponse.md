@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VoiceStateResponse } from "@ryan-blunden/discord/models/components";
+import { VoiceStateResponse } from "@ryan.blunden/discord/models/components";
 
 let value: VoiceStateResponse = {
   deaf: false,

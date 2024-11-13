@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TriggerTypingIndicatorRequest } from "@ryan-blunden/discord/models/operations";
+import { TriggerTypingIndicatorRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: TriggerTypingIndicatorRequest = {
   channelId: "<value>",

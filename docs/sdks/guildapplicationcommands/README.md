@@ -15,7 +15,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildApplicationCommandsDelete } from "@ryan-blunden/discord/funcs/guildApplicationCommandsDelete.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildApplicationCommandsDelete } from "@ryan.blunden/discord/funcs/guildApplicationCommandsDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -93,7 +93,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -117,8 +117,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildApplicationCommandsList } from "@ryan-blunden/discord/funcs/guildApplicationCommandsList.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildApplicationCommandsList } from "@ryan.blunden/discord/funcs/guildApplicationCommandsList.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -171,7 +171,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -197,8 +197,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildApplicationCommandsUpdate } from "@ryan-blunden/discord/funcs/guildApplicationCommandsUpdate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildApplicationCommandsUpdate } from "@ryan.blunden/discord/funcs/guildApplicationCommandsUpdate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -253,7 +253,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -282,8 +282,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildApplicationCommandsBulkSet } from "@ryan-blunden/discord/funcs/guildApplicationCommandsBulkSet.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildApplicationCommandsBulkSet } from "@ryan.blunden/discord/funcs/guildApplicationCommandsBulkSet.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

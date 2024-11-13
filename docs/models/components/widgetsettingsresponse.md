@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WidgetSettingsResponse } from "@ryan-blunden/discord/models/components";
+import { WidgetSettingsResponse } from "@ryan.blunden/discord/models/components";
 
 let value: WidgetSettingsResponse = {
   enabled: false,

@@ -1,9 +1,9 @@
-# @ryan-blunden/discord
+# @ryan.blunden/discord
 
-Developer-friendly & type-safe Typescript SDK specifically catered to leverage *@ryan-blunden/discord* API.
+Developer-friendly & type-safe Typescript SDK specifically catered to leverage *@ryan.blunden/discord* API.
 
 <div align="left">
-    <a href="https://www.speakeasy.com/?utm_source=@ryan-blunden/discord&utm_campaign=typescript"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
+    <a href="https://www.speakeasy.com/?utm_source=@ryan.blunden/discord&utm_campaign=typescript"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="width: 100px; height: 28px;" />
     </a>
@@ -46,25 +46,25 @@ The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https
 ### NPM
 
 ```bash
-npm add <UNSET>
+npm add @ryan.blunden/discord
 ```
 
 ### PNPM
 
 ```bash
-pnpm add <UNSET>
+pnpm add @ryan.blunden/discord
 ```
 
 ### Bun
 
 ```bash
-bun add <UNSET>
+bun add @ryan.blunden/discord
 ```
 
 ### Yarn
 
 ```bash
-yarn add <UNSET> zod
+yarn add @ryan.blunden/discord zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -83,7 +83,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -205,9 +205,9 @@ run();
 * [bulkDelete](docs/sdks/discordmessages/README.md#bulkdelete)
 * [deleteAllReactions](docs/sdks/discordmessages/README.md#deleteallreactions)
 * [get](docs/sdks/discordmessages/README.md#get)
+* [updateForm](docs/sdks/discordmessages/README.md#updateform)
 * [updateMultipart](docs/sdks/discordmessages/README.md#updatemultipart)
 * [updateJson](docs/sdks/discordmessages/README.md#updatejson)
-* [updateForm](docs/sdks/discordmessages/README.md#updateform)
 * [list](docs/sdks/discordmessages/README.md#list)
 * [createJson](docs/sdks/discordmessages/README.md#createjson)
 * [createForm](docs/sdks/discordmessages/README.md#createform)
@@ -506,9 +506,9 @@ run();
 * [updateOriginalMessageForm](docs/sdks/webhooks/README.md#updateoriginalmessageform)
 * [updateOriginalMessageMultipart](docs/sdks/webhooks/README.md#updateoriginalmessagemultipart)
 * [getMessage](docs/sdks/webhooks/README.md#getmessage)
-* [updateMessageJson](docs/sdks/webhooks/README.md#updatemessagejson)
 * [updateMessageForm](docs/sdks/webhooks/README.md#updatemessageform)
 * [updateMessageMultipart](docs/sdks/webhooks/README.md#updatemessagemultipart)
+* [updateMessageJson](docs/sdks/webhooks/README.md#updatemessagejson)
 * [executeGithubCompatible](docs/sdks/webhooks/README.md#executegithubcompatible)
 * [executeSlackCompatible](docs/sdks/webhooks/README.md#executeslackcompatible)
 * [get](docs/sdks/webhooks/README.md#get)
@@ -755,7 +755,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -785,7 +785,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   retryConfig: {
@@ -836,11 +836,11 @@ In addition, when custom error responses are specified for an operation, the SDK
 | errors.APIError      | 5XX         | \*/\*            |
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 import {
   ErrorResponse,
   SDKValidationError,
-} from "@ryan-blunden/discord/models/errors";
+} from "@ryan.blunden/discord/models/errors";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -888,7 +888,7 @@ Validation errors can also occur when either method arguments or data returned f
 
 The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   serverURL: "https://discord.com/api/v10",
@@ -925,8 +925,8 @@ custom header and a timeout to requests and how to use the `"requestError"` hook
 to log errors:
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
-import { HTTPClient } from "@ryan-blunden/discord/lib/http";
+import { Discord } from "@ryan.blunden/discord";
+import { HTTPClient } from "@ryan.blunden/discord/lib/http";
 
 const httpClient = new HTTPClient({
   // fetcher takes a function that has the same signature as native `fetch`.
@@ -969,7 +969,7 @@ This SDK supports the following security scheme globally:
 
 To authenticate with the API the `botToken` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -990,7 +990,7 @@ run();
 
 Some operations in this SDK require the security scheme to be specified at the request level. For example:
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -1017,7 +1017,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const sdk = new Discord({ debugLogger: console });
 ```
@@ -1040,4 +1040,4 @@ looking for the latest version.
 While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. 
 We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release. 
 
-### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=@ryan-blunden/discord&utm_campaign=typescript)
+### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=@ryan.blunden/discord&utm_campaign=typescript)

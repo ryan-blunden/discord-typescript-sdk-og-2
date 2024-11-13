@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { JoinThreadRequest } from "@ryan-blunden/discord/models/operations";
+import { JoinThreadRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: JoinThreadRequest = {
   channelId: "<value>",

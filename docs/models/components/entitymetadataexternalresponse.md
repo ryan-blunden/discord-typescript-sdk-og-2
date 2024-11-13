@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EntityMetadataExternalResponse } from "@ryan-blunden/discord/models/components";
+import { EntityMetadataExternalResponse } from "@ryan.blunden/discord/models/components";
 
 let value: EntityMetadataExternalResponse = {
   location: "<value>",

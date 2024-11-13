@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BulkUpdateGuildRolesRequestBody } from "@ryan-blunden/discord/models/operations";
+import { BulkUpdateGuildRolesRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: BulkUpdateGuildRolesRequestBody = {};
 ```

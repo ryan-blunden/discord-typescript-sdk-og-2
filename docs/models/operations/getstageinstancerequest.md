@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetStageInstanceRequest } from "@ryan-blunden/discord/models/operations";
+import { GetStageInstanceRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: GetStageInstanceRequest = {
   channelId: "<value>",

@@ -12,7 +12,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -38,8 +38,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsCommandsCreate } from "@ryan-blunden/discord/funcs/applicationsCommandsCreate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsCommandsCreate } from "@ryan.blunden/discord/funcs/applicationsCommandsCreate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

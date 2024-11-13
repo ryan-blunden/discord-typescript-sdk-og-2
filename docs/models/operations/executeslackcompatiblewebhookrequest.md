@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ExecuteSlackCompatibleWebhookRequest } from "@ryan-blunden/discord/models/operations";
+import { ExecuteSlackCompatibleWebhookRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: ExecuteSlackCompatibleWebhookRequest = {
   webhookId: "<value>",

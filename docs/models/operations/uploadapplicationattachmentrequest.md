@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UploadApplicationAttachmentRequest } from "@ryan-blunden/discord/models/operations";
+import { UploadApplicationAttachmentRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: UploadApplicationAttachmentRequest = {
   applicationId: "<value>",

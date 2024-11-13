@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WidgetActivity } from "@ryan-blunden/discord/models/components";
+import { WidgetActivity } from "@ryan.blunden/discord/models/components";
 
 let value: WidgetActivity = {
   name: "<value>",

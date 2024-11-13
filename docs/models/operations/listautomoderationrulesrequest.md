@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListAutoModerationRulesRequest } from "@ryan-blunden/discord/models/operations";
+import { ListAutoModerationRulesRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: ListAutoModerationRulesRequest = {
   guildId: "<value>",

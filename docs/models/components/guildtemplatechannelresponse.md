@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GuildTemplateChannelResponse } from "@ryan-blunden/discord/models/components";
+import { GuildTemplateChannelResponse } from "@ryan.blunden/discord/models/components";
 
 let value: GuildTemplateChannelResponse = {
   bitrate: 670198,

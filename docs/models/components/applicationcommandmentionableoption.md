@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApplicationCommandMentionableOption } from "@ryan-blunden/discord/models/components";
+import { ApplicationCommandMentionableOption } from "@ryan.blunden/discord/models/components";
 
 let value: ApplicationCommandMentionableOption = {
   name: "<value>",

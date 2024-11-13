@@ -13,7 +13,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -37,8 +37,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGuildsListCommandPermissions } from "@ryan-blunden/discord/funcs/applicationsGuildsListCommandPermissions.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGuildsListCommandPermissions } from "@ryan.blunden/discord/funcs/applicationsGuildsListCommandPermissions.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -91,7 +91,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -116,8 +116,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGuildsGetCommandPermissions } from "@ryan-blunden/discord/funcs/applicationsGuildsGetCommandPermissions.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGuildsGetCommandPermissions } from "@ryan.blunden/discord/funcs/applicationsGuildsGetCommandPermissions.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

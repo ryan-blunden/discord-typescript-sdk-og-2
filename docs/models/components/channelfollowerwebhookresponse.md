@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ChannelFollowerWebhookResponse } from "@ryan-blunden/discord/models/components";
+import { ChannelFollowerWebhookResponse } from "@ryan.blunden/discord/models/components";
 
 let value: ChannelFollowerWebhookResponse = {
   id: "<value>",

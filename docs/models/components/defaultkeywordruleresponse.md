@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DefaultKeywordRuleResponse } from "@ryan-blunden/discord/models/components";
+import { DefaultKeywordRuleResponse } from "@ryan.blunden/discord/models/components";
 
 let value: DefaultKeywordRuleResponse = {
   id: "<value>",

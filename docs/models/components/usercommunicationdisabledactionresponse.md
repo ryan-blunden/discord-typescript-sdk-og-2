@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UserCommunicationDisabledActionResponse } from "@ryan-blunden/discord/models/components";
+import { UserCommunicationDisabledActionResponse } from "@ryan.blunden/discord/models/components";
 
 let value: UserCommunicationDisabledActionResponse = {
   metadata: {

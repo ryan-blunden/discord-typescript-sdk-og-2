@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VanityURLResponse } from "@ryan-blunden/discord/models/components";
+import { VanityURLResponse } from "@ryan.blunden/discord/models/components";
 
 let value: VanityURLResponse = {
   uses: 251070,

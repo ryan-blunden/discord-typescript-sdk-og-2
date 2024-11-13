@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EmbeddedActivityInstance } from "@ryan-blunden/discord/models/components";
+import { EmbeddedActivityInstance } from "@ryan.blunden/discord/models/components";
 
 let value: EmbeddedActivityInstance = {
   applicationId: "<value>",

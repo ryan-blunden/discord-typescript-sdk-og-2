@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { KeywordTriggerMetadata } from "@ryan-blunden/discord/models/components";
+import { KeywordTriggerMetadata } from "@ryan.blunden/discord/models/components";
 
 let value: KeywordTriggerMetadata = {};
 ```

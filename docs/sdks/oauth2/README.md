@@ -14,7 +14,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -35,8 +35,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { oauth2GetMyApplication } from "@ryan-blunden/discord/funcs/oauth2GetMyApplication.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { oauth2GetMyApplication } from "@ryan.blunden/discord/funcs/oauth2GetMyApplication.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -84,7 +84,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -103,8 +103,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { oauth2GetKeys } from "@ryan-blunden/discord/funcs/oauth2GetKeys.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { oauth2GetKeys } from "@ryan.blunden/discord/funcs/oauth2GetKeys.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -151,7 +151,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -172,8 +172,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { oauth2GetAuthorization } from "@ryan-blunden/discord/funcs/oauth2GetAuthorization.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { oauth2GetAuthorization } from "@ryan.blunden/discord/funcs/oauth2GetAuthorization.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetWebhookMessageSecurity } from "@ryan-blunden/discord/models/operations";
+import { GetWebhookMessageSecurity } from "@ryan.blunden/discord/models/operations";
 
 let value: GetWebhookMessageSecurity = {};
 ```

@@ -5,7 +5,7 @@ Errors object returned by the Discord API
 ## Example Usage
 
 ```typescript
-import { ErrorResponse } from "@ryan-blunden/discord/models/errors";
+import { ErrorResponse } from "@ryan.blunden/discord/models/errors";
 
 // No examples available for this model
 ```

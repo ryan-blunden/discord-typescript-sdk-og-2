@@ -15,7 +15,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { stageInstancesCreate } from "@ryan-blunden/discord/funcs/stageInstancesCreate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { stageInstancesCreate } from "@ryan.blunden/discord/funcs/stageInstancesCreate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -92,7 +92,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -115,8 +115,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { stageInstancesGet } from "@ryan-blunden/discord/funcs/stageInstancesGet.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { stageInstancesGet } from "@ryan.blunden/discord/funcs/stageInstancesGet.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -167,7 +167,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -189,8 +189,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { stageInstancesDelete } from "@ryan-blunden/discord/funcs/stageInstancesDelete.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { stageInstancesDelete } from "@ryan.blunden/discord/funcs/stageInstancesDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -240,7 +240,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -264,8 +264,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { stageInstancesUpdate } from "@ryan-blunden/discord/funcs/stageInstancesUpdate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { stageInstancesUpdate } from "@ryan.blunden/discord/funcs/stageInstancesUpdate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

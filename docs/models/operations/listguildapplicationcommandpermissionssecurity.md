@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListGuildApplicationCommandPermissionsSecurity } from "@ryan-blunden/discord/models/operations";
+import { ListGuildApplicationCommandPermissionsSecurity } from "@ryan.blunden/discord/models/operations";
 
 let value: ListGuildApplicationCommandPermissionsSecurity = {};
 ```

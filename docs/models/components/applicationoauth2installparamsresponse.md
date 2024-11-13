@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApplicationOAuth2InstallParamsResponse } from "@ryan-blunden/discord/models/components";
+import { ApplicationOAuth2InstallParamsResponse } from "@ryan.blunden/discord/models/components";
 
 let value: ApplicationOAuth2InstallParamsResponse = {
   scopes: [

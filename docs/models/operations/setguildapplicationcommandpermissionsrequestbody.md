@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SetGuildApplicationCommandPermissionsRequestBody } from "@ryan-blunden/discord/models/operations";
+import { SetGuildApplicationCommandPermissionsRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: SetGuildApplicationCommandPermissionsRequestBody = {};
 ```

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResourceChannelResponse } from "@ryan-blunden/discord/models/components";
+import { ResourceChannelResponse } from "@ryan.blunden/discord/models/components";
 
 let value: ResourceChannelResponse = {
   channelId: "<value>",

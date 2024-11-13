@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SpamLinkRuleResponse } from "@ryan-blunden/discord/models/components";
+import { SpamLinkRuleResponse } from "@ryan.blunden/discord/models/components";
 
 let value: SpamLinkRuleResponse = {
   id: "<value>",

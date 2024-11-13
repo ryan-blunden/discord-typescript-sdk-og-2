@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreatePrivateChannelRequest } from "@ryan-blunden/discord/models/components";
+import { CreatePrivateChannelRequest } from "@ryan.blunden/discord/models/components";
 
 let value: CreatePrivateChannelRequest = {};
 ```

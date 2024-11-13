@@ -12,7 +12,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -35,8 +35,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { guildScheduledEventsDelete } from "@ryan-blunden/discord/funcs/guildScheduledEventsDelete.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { guildScheduledEventsDelete } from "@ryan.blunden/discord/funcs/guildScheduledEventsDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BlockMessageActionMetadata } from "@ryan-blunden/discord/models/components";
+import { BlockMessageActionMetadata } from "@ryan.blunden/discord/models/components";
 
 let value: BlockMessageActionMetadata = {};
 ```

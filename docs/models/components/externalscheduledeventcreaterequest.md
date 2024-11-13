@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ExternalScheduledEventCreateRequest } from "@ryan-blunden/discord/models/components";
+import { ExternalScheduledEventCreateRequest } from "@ryan.blunden/discord/models/components";
 
 let value: ExternalScheduledEventCreateRequest = {
   name: "<value>",

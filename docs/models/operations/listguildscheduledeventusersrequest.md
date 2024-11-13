@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListGuildScheduledEventUsersRequest } from "@ryan-blunden/discord/models/operations";
+import { ListGuildScheduledEventUsersRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: ListGuildScheduledEventUsersRequest = {
   guildId: "<value>",

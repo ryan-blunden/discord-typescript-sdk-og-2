@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DefaultKeywordListTriggerMetadata } from "@ryan-blunden/discord/models/components";
+import { DefaultKeywordListTriggerMetadata } from "@ryan.blunden/discord/models/components";
 
 let value: DefaultKeywordListTriggerMetadata = {};
 ```

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SoundboardSoundResponse } from "@ryan-blunden/discord/models/components";
+import { SoundboardSoundResponse } from "@ryan.blunden/discord/models/components";
 
 let value: SoundboardSoundResponse = {
   name: "<value>",

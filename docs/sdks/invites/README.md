@@ -13,7 +13,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -34,8 +34,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { invitesResolve } from "@ryan-blunden/discord/funcs/invitesResolve.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { invitesResolve } from "@ryan.blunden/discord/funcs/invitesResolve.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -85,7 +85,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -108,8 +108,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { invitesRevoke } from "@ryan-blunden/discord/funcs/invitesRevoke.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { invitesRevoke } from "@ryan.blunden/discord/funcs/invitesRevoke.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

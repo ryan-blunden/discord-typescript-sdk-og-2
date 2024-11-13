@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateGuildApplicationCommandRequest } from "@ryan-blunden/discord/models/operations";
+import { CreateGuildApplicationCommandRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: CreateGuildApplicationCommandRequest = {
   applicationId: "<value>",

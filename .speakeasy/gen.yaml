@@ -16,7 +16,7 @@ generation:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
 typescript:
-  version: 0.2.0
+  version: 0.2.1
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -42,7 +42,7 @@ typescript:
   methodArguments: require-security-and-request
   moduleFormat: commonjs
   outputModelSuffix: output
-  packageName: '@ryan-blunden/discord'
+  packageName: '@ryan.blunden/discord'
   responseFormat: flat
   templateVersion: v2
   useIndexModules: true

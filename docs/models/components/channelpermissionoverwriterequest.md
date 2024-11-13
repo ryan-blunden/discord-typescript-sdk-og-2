@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ChannelPermissionOverwriteRequest } from "@ryan-blunden/discord/models/components";
+import { ChannelPermissionOverwriteRequest } from "@ryan.blunden/discord/models/components";
 
 let value: ChannelPermissionOverwriteRequest = {
   id: "<value>",

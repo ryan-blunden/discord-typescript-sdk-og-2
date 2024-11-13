@@ -14,7 +14,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -38,8 +38,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { autoModerationRulesGet } from "@ryan-blunden/discord/funcs/autoModerationRulesGet.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { autoModerationRulesGet } from "@ryan.blunden/discord/funcs/autoModerationRulesGet.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -91,7 +91,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -114,8 +114,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { autoModerationRulesDelete } from "@ryan-blunden/discord/funcs/autoModerationRulesDelete.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { autoModerationRulesDelete } from "@ryan.blunden/discord/funcs/autoModerationRulesDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -166,7 +166,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -192,8 +192,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { autoModerationRulesCreate } from "@ryan-blunden/discord/funcs/autoModerationRulesCreate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { autoModerationRulesCreate } from "@ryan.blunden/discord/funcs/autoModerationRulesCreate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

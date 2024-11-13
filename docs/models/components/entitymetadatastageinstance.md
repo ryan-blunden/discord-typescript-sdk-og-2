@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EntityMetadataStageInstance } from "@ryan-blunden/discord/models/components";
+import { EntityMetadataStageInstance } from "@ryan.blunden/discord/models/components";
 
 let value: EntityMetadataStageInstance = {};
 ```

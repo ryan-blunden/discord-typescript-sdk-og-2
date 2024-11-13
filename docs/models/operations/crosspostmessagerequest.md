@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CrosspostMessageRequest } from "@ryan-blunden/discord/models/operations";
+import { CrosspostMessageRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: CrosspostMessageRequest = {
   channelId: "<value>",

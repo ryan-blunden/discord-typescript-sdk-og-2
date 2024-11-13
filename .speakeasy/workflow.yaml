@@ -9,7 +9,7 @@ sources:
             - location: .speakeasy/speakeasy-modifications-overlay.yaml
         output: .speakeasy/output-spec.yaml
         registry:
-            location: registry.speakeasyapi.dev/ryan-blunden-l5y/ryan-blunden/discord-oas
+            location: registry.speakeasyapi.dev/ryan-blunden-l5y/ryan.blunden/discord-oas
 targets:
     discord:
         target: typescript
@@ -19,5 +19,5 @@ targets:
                 token: $npm_token
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/ryan-blunden-l5y/ryan-blunden/discord-oas-code-samples
+                location: registry.speakeasyapi.dev/ryan-blunden-l5y/ryan.blunden/discord-oas-code-samples
             blocking: false

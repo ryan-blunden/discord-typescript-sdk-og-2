@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BulkDeleteMessagesRequest } from "@ryan-blunden/discord/models/operations";
+import { BulkDeleteMessagesRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: BulkDeleteMessagesRequest = {
   channelId: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VanityURLErrorResponse } from "@ryan-blunden/discord/models/components";
+import { VanityURLErrorResponse } from "@ryan.blunden/discord/models/components";
 
 let value: VanityURLErrorResponse = {
   message: "<value>",

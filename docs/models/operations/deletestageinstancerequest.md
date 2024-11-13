@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteStageInstanceRequest } from "@ryan-blunden/discord/models/operations";
+import { DeleteStageInstanceRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: DeleteStageInstanceRequest = {
   channelId: "<value>",

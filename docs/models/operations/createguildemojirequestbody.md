@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateGuildEmojiRequestBody } from "@ryan-blunden/discord/models/operations";
+import { CreateGuildEmojiRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: CreateGuildEmojiRequestBody = {
   name: "<value>",

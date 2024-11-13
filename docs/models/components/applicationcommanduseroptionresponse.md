@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApplicationCommandUserOptionResponse } from "@ryan-blunden/discord/models/components";
+import { ApplicationCommandUserOptionResponse } from "@ryan.blunden/discord/models/components";
 
 let value: ApplicationCommandUserOptionResponse = {
   name: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UserCommunicationDisabledActionMetadataResponse } from "@ryan-blunden/discord/models/components";
+import { UserCommunicationDisabledActionMetadataResponse } from "@ryan.blunden/discord/models/components";
 
 let value: UserCommunicationDisabledActionMetadataResponse = {
   durationSeconds: 726851,

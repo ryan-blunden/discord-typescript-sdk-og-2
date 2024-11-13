@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MentionableSelect } from "@ryan-blunden/discord/models/components";
+import { MentionableSelect } from "@ryan.blunden/discord/models/components";
 
 let value: MentionableSelect = {
   customId: "<id>",

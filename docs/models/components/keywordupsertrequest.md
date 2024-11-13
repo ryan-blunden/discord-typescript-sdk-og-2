@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { KeywordUpsertRequest } from "@ryan-blunden/discord/models/components";
+import { KeywordUpsertRequest } from "@ryan.blunden/discord/models/components";
 
 let value: KeywordUpsertRequest = {
   name: "<value>",

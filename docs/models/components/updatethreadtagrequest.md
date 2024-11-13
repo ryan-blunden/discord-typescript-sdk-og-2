@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateThreadTagRequest } from "@ryan-blunden/discord/models/components";
+import { UpdateThreadTagRequest } from "@ryan.blunden/discord/models/components";
 
 let value: UpdateThreadTagRequest = {
   name: "<value>",

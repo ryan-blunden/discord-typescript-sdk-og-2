@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GatewayBotSessionStartLimitResponse } from "@ryan-blunden/discord/models/components";
+import { GatewayBotSessionStartLimitResponse } from "@ryan.blunden/discord/models/components";
 
 let value: GatewayBotSessionStartLimitResponse = {
   maxConcurrency: 698445,

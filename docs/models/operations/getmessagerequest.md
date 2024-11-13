@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetMessageRequest } from "@ryan-blunden/discord/models/operations";
+import { GetMessageRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: GetMessageRequest = {
   channelId: "<value>",

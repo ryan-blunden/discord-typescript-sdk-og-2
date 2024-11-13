@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetStickerPackRequest } from "@ryan-blunden/discord/models/operations";
+import { GetStickerPackRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: GetStickerPackRequest = {
   packId: "<value>",

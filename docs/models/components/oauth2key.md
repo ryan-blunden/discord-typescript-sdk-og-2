@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { OAuth2Key } from "@ryan-blunden/discord/models/components";
+import { OAuth2Key } from "@ryan.blunden/discord/models/components";
 
 let value: OAuth2Key = {
   kty: "<value>",

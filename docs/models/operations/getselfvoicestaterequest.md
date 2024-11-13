@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetSelfVoiceStateRequest } from "@ryan-blunden/discord/models/operations";
+import { GetSelfVoiceStateRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: GetSelfVoiceStateRequest = {
   guildId: "<value>",

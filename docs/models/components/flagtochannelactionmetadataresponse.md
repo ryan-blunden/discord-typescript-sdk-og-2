@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FlagToChannelActionMetadataResponse } from "@ryan-blunden/discord/models/components";
+import { FlagToChannelActionMetadataResponse } from "@ryan.blunden/discord/models/components";
 
 let value: FlagToChannelActionMetadataResponse = {
   channelId: "<value>",

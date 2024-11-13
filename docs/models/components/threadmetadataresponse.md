@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ThreadMetadataResponse } from "@ryan-blunden/discord/models/components";
+import { ThreadMetadataResponse } from "@ryan.blunden/discord/models/components";
 
 let value: ThreadMetadataResponse = {
   archived: false,

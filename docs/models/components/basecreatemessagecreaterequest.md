@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BaseCreateMessageCreateRequest } from "@ryan-blunden/discord/models/components";
+import { BaseCreateMessageCreateRequest } from "@ryan.blunden/discord/models/components";
 
 let value: BaseCreateMessageCreateRequest = {};
 ```

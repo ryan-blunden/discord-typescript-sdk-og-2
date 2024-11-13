@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EntityMetadataVoiceResponse } from "@ryan-blunden/discord/models/components";
+import { EntityMetadataVoiceResponse } from "@ryan.blunden/discord/models/components";
 
 let value: EntityMetadataVoiceResponse = {};
 ```

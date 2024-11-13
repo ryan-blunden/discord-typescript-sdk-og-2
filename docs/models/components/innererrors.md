@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { InnerErrors } from "@ryan-blunden/discord/models/components";
+import { InnerErrors } from "@ryan.blunden/discord/models/components";
 
 let value: InnerErrors = {
   errors: [

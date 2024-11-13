@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PreviewPruneGuildRequest } from "@ryan-blunden/discord/models/operations";
+import { PreviewPruneGuildRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: PreviewPruneGuildRequest = {
   guildId: "<value>",

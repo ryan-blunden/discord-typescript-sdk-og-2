@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateThreadRequestPartial } from "@ryan-blunden/discord/models/components";
+import { UpdateThreadRequestPartial } from "@ryan.blunden/discord/models/components";
 
 let value: UpdateThreadRequestPartial = {};
 ```

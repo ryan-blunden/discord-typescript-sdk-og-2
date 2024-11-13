@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MentionSpamTriggerMetadataResponse } from "@ryan-blunden/discord/models/components";
+import { MentionSpamTriggerMetadataResponse } from "@ryan.blunden/discord/models/components";
 
 let value: MentionSpamTriggerMetadataResponse = {
   mentionTotalLimit: 528440,

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GuildTemplateChannelTags } from "@ryan-blunden/discord/models/components";
+import { GuildTemplateChannelTags } from "@ryan.blunden/discord/models/components";
 
 let value: GuildTemplateChannelTags = {
   name: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BulkSetApplicationCommandsSecurity } from "@ryan-blunden/discord/models/operations";
+import { BulkSetApplicationCommandsSecurity } from "@ryan.blunden/discord/models/operations";
 
 let value: BulkSetApplicationCommandsSecurity = {};
 ```

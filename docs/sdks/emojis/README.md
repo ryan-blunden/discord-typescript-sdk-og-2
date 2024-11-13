@@ -13,7 +13,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -36,8 +36,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsEmojisDelete } from "@ryan-blunden/discord/funcs/applicationsEmojisDelete.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsEmojisDelete } from "@ryan.blunden/discord/funcs/applicationsEmojisDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -88,7 +88,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -115,8 +115,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsEmojisCreate } from "@ryan-blunden/discord/funcs/applicationsEmojisCreate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsEmojisCreate } from "@ryan.blunden/discord/funcs/applicationsEmojisCreate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

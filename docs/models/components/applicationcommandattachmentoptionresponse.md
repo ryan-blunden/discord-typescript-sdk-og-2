@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApplicationCommandAttachmentOptionResponse } from "@ryan-blunden/discord/models/components";
+import { ApplicationCommandAttachmentOptionResponse } from "@ryan.blunden/discord/models/components";
 
 let value: ApplicationCommandAttachmentOptionResponse = {
   name: "<value>",

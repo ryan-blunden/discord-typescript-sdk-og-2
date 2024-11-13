@@ -34,7 +34,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -55,8 +55,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGetMe } from "@ryan-blunden/discord/funcs/applicationsGetMe.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGetMe } from "@ryan.blunden/discord/funcs/applicationsGetMe.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -104,7 +104,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -125,8 +125,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsUpdateSelf } from "@ryan-blunden/discord/funcs/applicationsUpdateSelf.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsUpdateSelf } from "@ryan.blunden/discord/funcs/applicationsUpdateSelf.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -175,7 +175,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -201,8 +201,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsSetGuildCommandPermissions } from "@ryan-blunden/discord/funcs/applicationsSetGuildCommandPermissions.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsSetGuildCommandPermissions } from "@ryan.blunden/discord/funcs/applicationsSetGuildCommandPermissions.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -257,7 +257,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -279,8 +279,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsDeleteUserRoleConnection } from "@ryan-blunden/discord/funcs/applicationsDeleteUserRoleConnection.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsDeleteUserRoleConnection } from "@ryan.blunden/discord/funcs/applicationsDeleteUserRoleConnection.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -330,7 +330,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -353,8 +353,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGetRoleConnectionsMetadata } from "@ryan-blunden/discord/funcs/applicationsGetRoleConnectionsMetadata.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGetRoleConnectionsMetadata } from "@ryan.blunden/discord/funcs/applicationsGetRoleConnectionsMetadata.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -405,7 +405,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -435,8 +435,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsUpdateRoleConnectionsMetadata } from "@ryan-blunden/discord/funcs/applicationsUpdateRoleConnectionsMetadata.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsUpdateRoleConnectionsMetadata } from "@ryan.blunden/discord/funcs/applicationsUpdateRoleConnectionsMetadata.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -494,7 +494,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -517,8 +517,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsConsumeEntitlement } from "@ryan-blunden/discord/funcs/applicationsConsumeEntitlement.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsConsumeEntitlement } from "@ryan.blunden/discord/funcs/applicationsConsumeEntitlement.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -570,7 +570,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -597,8 +597,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsCreateGuildCommand } from "@ryan-blunden/discord/funcs/applicationsCreateGuildCommand.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsCreateGuildCommand } from "@ryan.blunden/discord/funcs/applicationsCreateGuildCommand.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -654,7 +654,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -678,8 +678,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGetActivityInstance } from "@ryan-blunden/discord/funcs/applicationsGetActivityInstance.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGetActivityInstance } from "@ryan.blunden/discord/funcs/applicationsGetActivityInstance.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -731,7 +731,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -755,8 +755,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGetEntitlement } from "@ryan-blunden/discord/funcs/applicationsGetEntitlement.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGetEntitlement } from "@ryan.blunden/discord/funcs/applicationsGetEntitlement.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -809,7 +809,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -832,8 +832,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsDeleteEntitlement } from "@ryan-blunden/discord/funcs/applicationsDeleteEntitlement.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsDeleteEntitlement } from "@ryan.blunden/discord/funcs/applicationsDeleteEntitlement.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -885,7 +885,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -909,8 +909,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGetEntitlements } from "@ryan-blunden/discord/funcs/applicationsGetEntitlements.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGetEntitlements } from "@ryan.blunden/discord/funcs/applicationsGetEntitlements.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -963,7 +963,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -991,8 +991,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsCreateEntitlement } from "@ryan-blunden/discord/funcs/applicationsCreateEntitlement.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsCreateEntitlement } from "@ryan.blunden/discord/funcs/applicationsCreateEntitlement.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1048,7 +1048,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -1074,8 +1074,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsUploadAttachment } from "@ryan-blunden/discord/funcs/applicationsUploadAttachment.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsUploadAttachment } from "@ryan.blunden/discord/funcs/applicationsUploadAttachment.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1130,7 +1130,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -1154,8 +1154,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGetCommand } from "@ryan-blunden/discord/funcs/applicationsGetCommand.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGetCommand } from "@ryan.blunden/discord/funcs/applicationsGetCommand.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1208,7 +1208,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -1231,8 +1231,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsDeleteCommand } from "@ryan-blunden/discord/funcs/applicationsDeleteCommand.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsDeleteCommand } from "@ryan.blunden/discord/funcs/applicationsDeleteCommand.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1284,7 +1284,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -1307,8 +1307,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsListCommands } from "@ryan-blunden/discord/funcs/applicationsListCommands.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsListCommands } from "@ryan.blunden/discord/funcs/applicationsListCommands.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1360,7 +1360,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -1391,8 +1391,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsBulkSetCommands } from "@ryan-blunden/discord/funcs/applicationsBulkSetCommands.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsBulkSetCommands } from "@ryan.blunden/discord/funcs/applicationsBulkSetCommands.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1452,7 +1452,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -1476,8 +1476,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGetEmoji } from "@ryan-blunden/discord/funcs/applicationsGetEmoji.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGetEmoji } from "@ryan.blunden/discord/funcs/applicationsGetEmoji.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1529,7 +1529,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -1554,8 +1554,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsUpdateEmoji } from "@ryan-blunden/discord/funcs/applicationsUpdateEmoji.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsUpdateEmoji } from "@ryan.blunden/discord/funcs/applicationsUpdateEmoji.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1608,7 +1608,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -1631,8 +1631,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsListEmojis } from "@ryan-blunden/discord/funcs/applicationsListEmojis.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsListEmojis } from "@ryan.blunden/discord/funcs/applicationsListEmojis.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1683,7 +1683,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -1706,8 +1706,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsGet } from "@ryan-blunden/discord/funcs/applicationsGet.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsGet } from "@ryan.blunden/discord/funcs/applicationsGet.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -1758,7 +1758,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -1782,8 +1782,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { applicationsUpdate } from "@ryan-blunden/discord/funcs/applicationsUpdate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { applicationsUpdate } from "@ryan.blunden/discord/funcs/applicationsUpdate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

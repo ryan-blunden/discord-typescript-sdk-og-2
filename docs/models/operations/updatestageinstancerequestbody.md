@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateStageInstanceRequestBody } from "@ryan-blunden/discord/models/operations";
+import { UpdateStageInstanceRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: UpdateStageInstanceRequestBody = {};
 ```

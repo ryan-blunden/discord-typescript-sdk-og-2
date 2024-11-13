@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateWebhookRequestBody } from "@ryan-blunden/discord/models/operations";
+import { CreateWebhookRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: CreateWebhookRequestBody = {
   name: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BulkBanUsersFromGuildRequest } from "@ryan-blunden/discord/models/operations";
+import { BulkBanUsersFromGuildRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: BulkBanUsersFromGuildRequest = {
   guildId: "<value>",

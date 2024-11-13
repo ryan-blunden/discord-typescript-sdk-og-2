@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApplicationFormPartial } from "@ryan-blunden/discord/models/components";
+import { ApplicationFormPartial } from "@ryan.blunden/discord/models/components";
 
 let value: ApplicationFormPartial = {};
 ```

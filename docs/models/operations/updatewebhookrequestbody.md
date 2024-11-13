@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateWebhookRequestBody } from "@ryan-blunden/discord/models/operations";
+import { UpdateWebhookRequestBody } from "@ryan.blunden/discord/models/operations";
 
 let value: UpdateWebhookRequestBody = {};
 ```

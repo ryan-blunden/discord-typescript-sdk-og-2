@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { FollowChannelRequest } from "@ryan-blunden/discord/models/operations";
+import { FollowChannelRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: FollowChannelRequest = {
   channelId: "<value>",

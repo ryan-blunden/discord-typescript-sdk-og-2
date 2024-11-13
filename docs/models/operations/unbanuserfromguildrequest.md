@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UnbanUserFromGuildRequest } from "@ryan-blunden/discord/models/operations";
+import { UnbanUserFromGuildRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: UnbanUserFromGuildRequest = {
   guildId: "<value>",

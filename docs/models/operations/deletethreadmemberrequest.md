@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteThreadMemberRequest } from "@ryan-blunden/discord/models/operations";
+import { DeleteThreadMemberRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: DeleteThreadMemberRequest = {
   channelId: "<value>",

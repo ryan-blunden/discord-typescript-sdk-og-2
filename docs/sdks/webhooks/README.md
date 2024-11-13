@@ -10,9 +10,9 @@
 * [updateOriginalMessageForm](#updateoriginalmessageform)
 * [updateOriginalMessageMultipart](#updateoriginalmessagemultipart)
 * [getMessage](#getmessage)
-* [updateMessageJson](#updatemessagejson)
 * [updateMessageForm](#updatemessageform)
 * [updateMessageMultipart](#updatemessagemultipart)
+* [updateMessageJson](#updatemessagejson)
 * [executeGithubCompatible](#executegithubcompatible)
 * [executeSlackCompatible](#executeslackcompatible)
 * [get](#get)
@@ -24,7 +24,7 @@
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -45,8 +45,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksDeleteOriginalMessage } from "@ryan-blunden/discord/funcs/webhooksDeleteOriginalMessage.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksDeleteOriginalMessage } from "@ryan.blunden/discord/funcs/webhooksDeleteOriginalMessage.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -96,7 +96,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -119,8 +119,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksUpdateOriginalMessageJson } from "@ryan-blunden/discord/funcs/webhooksUpdateOriginalMessageJson.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksUpdateOriginalMessageJson } from "@ryan.blunden/discord/funcs/webhooksUpdateOriginalMessageJson.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -172,7 +172,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -195,8 +195,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksUpdateOriginalMessageForm } from "@ryan-blunden/discord/funcs/webhooksUpdateOriginalMessageForm.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksUpdateOriginalMessageForm } from "@ryan.blunden/discord/funcs/webhooksUpdateOriginalMessageForm.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -248,7 +248,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -271,8 +271,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksUpdateOriginalMessageMultipart } from "@ryan-blunden/discord/funcs/webhooksUpdateOriginalMessageMultipart.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksUpdateOriginalMessageMultipart } from "@ryan.blunden/discord/funcs/webhooksUpdateOriginalMessageMultipart.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -324,7 +324,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -347,8 +347,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksGetMessage } from "@ryan-blunden/discord/funcs/webhooksGetMessage.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksGetMessage } from "@ryan.blunden/discord/funcs/webhooksGetMessage.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -395,90 +395,12 @@ run();
 | errors.ErrorResponse | 4XX                  | application/json     |
 | errors.APIError      | 5XX                  | \*/\*                |
 
-## updateMessageJson
-
-### Example Usage
-
-```typescript
-import { Discord } from "@ryan-blunden/discord";
-
-const discord = new Discord();
-
-async function run() {
-  const result = await discord.webhooks.updateMessageJson({
-    webhookId: "<value>",
-    webhookToken: "<value>",
-    messageId: "<value>",
-    incomingWebhookUpdateRequestPartial: {},
-  });
-
-  // Handle the result
-  console.log(result);
-}
-
-run();
-```
-
-### Standalone function
-
-The standalone function version of this method:
-
-```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksUpdateMessageJson } from "@ryan-blunden/discord/funcs/webhooksUpdateMessageJson.js";
-
-// Use `DiscordCore` for best tree-shaking performance.
-// You can create one instance of it to use across an application.
-const discord = new DiscordCore();
-
-async function run() {
-  const res = await webhooksUpdateMessageJson(discord, {
-    webhookId: "<value>",
-    webhookToken: "<value>",
-    messageId: "<value>",
-    incomingWebhookUpdateRequestPartial: {},
-  });
-
-  if (!res.ok) {
-    throw res.error;
-  }
-
-  const { value: result } = res;
-
-  // Handle the result
-  console.log(result);
-}
-
-run();
-```
-
-### Parameters
-
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.UpdateWebhookMessageJsonRequest](../../models/operations/updatewebhookmessagejsonrequest.md)                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
-| `security`                                                                                                                                                                     | [operations.UpdateWebhookMessageJsonSecurity](../../models/operations/updatewebhookmessagejsonsecurity.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
-| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
-| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
-| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
-
-### Response
-
-**Promise\<[components.MessageResponse](../../models/components/messageresponse.md)\>**
-
-### Errors
-
-| Error Type           | Status Code          | Content Type         |
-| -------------------- | -------------------- | -------------------- |
-| errors.ErrorResponse | 4XX                  | application/json     |
-| errors.APIError      | 5XX                  | \*/\*                |
-
 ## updateMessageForm
 
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -502,8 +424,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksUpdateMessageForm } from "@ryan-blunden/discord/funcs/webhooksUpdateMessageForm.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksUpdateMessageForm } from "@ryan.blunden/discord/funcs/webhooksUpdateMessageForm.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -556,7 +478,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -580,8 +502,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksUpdateMessageMultipart } from "@ryan-blunden/discord/funcs/webhooksUpdateMessageMultipart.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksUpdateMessageMultipart } from "@ryan.blunden/discord/funcs/webhooksUpdateMessageMultipart.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -629,12 +551,90 @@ run();
 | errors.ErrorResponse | 4XX                  | application/json     |
 | errors.APIError      | 5XX                  | \*/\*                |
 
+## updateMessageJson
+
+### Example Usage
+
+```typescript
+import { Discord } from "@ryan.blunden/discord";
+
+const discord = new Discord();
+
+async function run() {
+  const result = await discord.webhooks.updateMessageJson({
+    webhookId: "<value>",
+    webhookToken: "<value>",
+    messageId: "<value>",
+    incomingWebhookUpdateRequestPartial: {},
+  });
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksUpdateMessageJson } from "@ryan.blunden/discord/funcs/webhooksUpdateMessageJson.js";
+
+// Use `DiscordCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const discord = new DiscordCore();
+
+async function run() {
+  const res = await webhooksUpdateMessageJson(discord, {
+    webhookId: "<value>",
+    webhookToken: "<value>",
+    messageId: "<value>",
+    incomingWebhookUpdateRequestPartial: {},
+  });
+
+  if (!res.ok) {
+    throw res.error;
+  }
+
+  const { value: result } = res;
+
+  // Handle the result
+  console.log(result);
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.UpdateWebhookMessageJsonRequest](../../models/operations/updatewebhookmessagejsonrequest.md)                                                                       | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `security`                                                                                                                                                                     | [operations.UpdateWebhookMessageJsonSecurity](../../models/operations/updatewebhookmessagejsonsecurity.md)                                                                     | :heavy_check_mark:                                                                                                                                                             | The security requirements to use for the request.                                                                                                                              |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[components.MessageResponse](../../models/components/messageresponse.md)\>**
+
+### Errors
+
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| errors.ErrorResponse | 4XX                  | application/json     |
+| errors.APIError      | 5XX                  | \*/\*                |
+
 ## executeGithubCompatible
 
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -663,8 +663,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksExecuteGithubCompatible } from "@ryan-blunden/discord/funcs/webhooksExecuteGithubCompatible.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksExecuteGithubCompatible } from "@ryan.blunden/discord/funcs/webhooksExecuteGithubCompatible.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -722,7 +722,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord();
 
@@ -745,8 +745,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksExecuteSlackCompatible } from "@ryan-blunden/discord/funcs/webhooksExecuteSlackCompatible.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksExecuteSlackCompatible } from "@ryan.blunden/discord/funcs/webhooksExecuteSlackCompatible.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -798,7 +798,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -821,8 +821,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksGet } from "@ryan-blunden/discord/funcs/webhooksGet.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksGet } from "@ryan.blunden/discord/funcs/webhooksGet.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -873,7 +873,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -895,8 +895,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksDelete } from "@ryan-blunden/discord/funcs/webhooksDelete.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksDelete } from "@ryan.blunden/discord/funcs/webhooksDelete.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -946,7 +946,7 @@ run();
 ### Example Usage
 
 ```typescript
-import { Discord } from "@ryan-blunden/discord";
+import { Discord } from "@ryan.blunden/discord";
 
 const discord = new Discord({
   botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
@@ -970,8 +970,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { DiscordCore } from "@ryan-blunden/discord/core.js";
-import { webhooksUpdate } from "@ryan-blunden/discord/funcs/webhooksUpdate.js";
+import { DiscordCore } from "@ryan.blunden/discord/core.js";
+import { webhooksUpdate } from "@ryan.blunden/discord/funcs/webhooksUpdate.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

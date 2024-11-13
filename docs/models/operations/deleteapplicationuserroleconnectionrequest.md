@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteApplicationUserRoleConnectionRequest } from "@ryan-blunden/discord/models/operations";
+import { DeleteApplicationUserRoleConnectionRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: DeleteApplicationUserRoleConnectionRequest = {
   applicationId: "<value>",

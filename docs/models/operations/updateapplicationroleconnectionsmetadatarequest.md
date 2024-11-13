@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateApplicationRoleConnectionsMetadataRequest } from "@ryan-blunden/discord/models/operations";
+import { UpdateApplicationRoleConnectionsMetadataRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: UpdateApplicationRoleConnectionsMetadataRequest = {
   applicationId: "<value>",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApplicationIntegrationTypeConfiguration } from "@ryan-blunden/discord/models/components";
+import { ApplicationIntegrationTypeConfiguration } from "@ryan.blunden/discord/models/components";
 
 let value: ApplicationIntegrationTypeConfiguration = {};
 ```

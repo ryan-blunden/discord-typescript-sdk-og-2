@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ListMessageReactionsByEmojiRequest } from "@ryan-blunden/discord/models/operations";
+import { ListMessageReactionsByEmojiRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: ListMessageReactionsByEmojiRequest = {
   channelId: "<value>",

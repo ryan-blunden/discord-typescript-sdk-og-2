@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GithubCommit } from "@ryan-blunden/discord/models/components";
+import { GithubCommit } from "@ryan.blunden/discord/models/components";
 
 let value: GithubCommit = {
   id: "<id>",

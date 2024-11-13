@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { InviteResolveSecurity } from "@ryan-blunden/discord/models/operations";
+import { InviteResolveSecurity } from "@ryan.blunden/discord/models/operations";
 
 let value: InviteResolveSecurity = {};
 ```

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteOriginalWebhookMessageRequest } from "@ryan-blunden/discord/models/operations";
+import { DeleteOriginalWebhookMessageRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: DeleteOriginalWebhookMessageRequest = {
   webhookId: "<value>",

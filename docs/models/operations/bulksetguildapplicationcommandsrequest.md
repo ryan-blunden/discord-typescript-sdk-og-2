@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { BulkSetGuildApplicationCommandsRequest } from "@ryan-blunden/discord/models/operations";
+import { BulkSetGuildApplicationCommandsRequest } from "@ryan.blunden/discord/models/operations";
 
 let value: BulkSetGuildApplicationCommandsRequest = {
   applicationId: "<value>",
