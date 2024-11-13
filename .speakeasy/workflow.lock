@@ -1,0 +1,37 @@
+speakeasyVersion: 1.438.1
+sources:
+    Discord-OAS:
+        sourceNamespace: discord-oas
+        sourceRevisionDigest: sha256:f3ee3a6caac0d4a5fb124e5f968639a7dbefb455bb7f19857574abdc289d12a9
+        sourceBlobDigest: sha256:c5428094b23f7f1e580a500c07c0c940f02cc1a67d8b90b8a75d3acb88499968
+        tags:
+            - latest
+targets:
+    discord:
+        source: Discord-OAS
+        sourceNamespace: discord-oas
+        sourceRevisionDigest: sha256:f3ee3a6caac0d4a5fb124e5f968639a7dbefb455bb7f19857574abdc289d12a9
+        sourceBlobDigest: sha256:c5428094b23f7f1e580a500c07c0c940f02cc1a67d8b90b8a75d3acb88499968
+        codeSamplesNamespace: discord-oas-code-samples
+        codeSamplesRevisionDigest: sha256:57e89f142750573a44233ebe0a060715fd6db91fc0163eb28994f0b0f241f11f
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Discord-OAS:
+            inputs:
+                - location: https://raw.githubusercontent.com/discord/discord-api-spec/refs/heads/main/specs/openapi.json
+            overlays:
+                - location: .speakeasy/fixes-overlay.yaml
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            output: .speakeasy/output-spec.yaml
+            registry:
+                location: registry.speakeasyapi.dev/ryan-blunden-l5y/ryan-blunden/discord-oas
+    targets:
+        discord:
+            target: typescript
+            source: Discord-OAS
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/ryan-blunden-l5y/ryan-blunden/discord-oas-code-samples
+                blocking: false

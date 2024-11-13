@@ -1,0 +1,2 @@
+# AutoModeration
+(*guilds.autoModeration*)
