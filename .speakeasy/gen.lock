@@ -5,8 +5,11 @@ management:
   docVersion: "10"
   speakeasyVersion: 1.438.1
   generationVersion: 2.457.2
-  releaseVersion: 0.2.0
-  configChecksum: 3f514a7bb264800e2b17bca3c1ad6b19
+  releaseVersion: 0.2.1
+  configChecksum: eae3e34bcf5f497c905277d23fcee02c
+  repoURL: https://github.com/ryan-blunden/discord-typescript-sdk.git
+  installationURL: https://github.com/ryan-blunden/discord-typescript-sdk
+  published: true
 features:
   typescript:
     additionalDependencies: 0.1.0

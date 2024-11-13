@@ -46,25 +46,25 @@ The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https
 ### NPM
 
 ```bash
-npm add <UNSET>
+npm add @ryan-blunden/discord
 ```
 
 ### PNPM
 
 ```bash
-pnpm add <UNSET>
+pnpm add @ryan-blunden/discord
 ```
 
 ### Bun
 
 ```bash
-bun add <UNSET>
+bun add @ryan-blunden/discord
 ```
 
 ### Yarn
 
 ```bash
-yarn add <UNSET> zod
+yarn add @ryan-blunden/discord zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -205,9 +205,9 @@ run();
 * [bulkDelete](docs/sdks/discordmessages/README.md#bulkdelete)
 * [deleteAllReactions](docs/sdks/discordmessages/README.md#deleteallreactions)
 * [get](docs/sdks/discordmessages/README.md#get)
+* [updateForm](docs/sdks/discordmessages/README.md#updateform)
 * [updateMultipart](docs/sdks/discordmessages/README.md#updatemultipart)
 * [updateJson](docs/sdks/discordmessages/README.md#updatejson)
-* [updateForm](docs/sdks/discordmessages/README.md#updateform)
 * [list](docs/sdks/discordmessages/README.md#list)
 * [createJson](docs/sdks/discordmessages/README.md#createjson)
 * [createForm](docs/sdks/discordmessages/README.md#createform)
@@ -506,9 +506,9 @@ run();
 * [updateOriginalMessageForm](docs/sdks/webhooks/README.md#updateoriginalmessageform)
 * [updateOriginalMessageMultipart](docs/sdks/webhooks/README.md#updateoriginalmessagemultipart)
 * [getMessage](docs/sdks/webhooks/README.md#getmessage)
-* [updateMessageJson](docs/sdks/webhooks/README.md#updatemessagejson)
 * [updateMessageForm](docs/sdks/webhooks/README.md#updatemessageform)
 * [updateMessageMultipart](docs/sdks/webhooks/README.md#updatemessagemultipart)
+* [updateMessageJson](docs/sdks/webhooks/README.md#updatemessagejson)
 * [executeGithubCompatible](docs/sdks/webhooks/README.md#executegithubcompatible)
 * [executeSlackCompatible](docs/sdks/webhooks/README.md#executeslackcompatible)
 * [get](docs/sdks/webhooks/README.md#get)

@@ -24,12 +24,12 @@
                 "typescript.preferences.importModuleSpecifier": "relative",
                 "[typescript]": {
                     "editor.codeActionsOnSave": {
-                        "source.organizeImports": "always"
+                        "source.organizeImports": true
                     }
                 },
                 "[typescriptreact]": {
                     "editor.codeActionsOnSave": {
-                        "source.organizeImports": "always"
+                        "source.organizeImports": true
                     }
                 }
             }

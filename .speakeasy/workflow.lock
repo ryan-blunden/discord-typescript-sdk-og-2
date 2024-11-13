@@ -2,18 +2,19 @@ speakeasyVersion: 1.438.1
 sources:
     Discord-OAS:
         sourceNamespace: discord-oas
-        sourceRevisionDigest: sha256:f3ee3a6caac0d4a5fb124e5f968639a7dbefb455bb7f19857574abdc289d12a9
-        sourceBlobDigest: sha256:c5428094b23f7f1e580a500c07c0c940f02cc1a67d8b90b8a75d3acb88499968
+        sourceRevisionDigest: sha256:b06e9767bcd7ffffbc3c5866a749e160f9ad40060db882b0e1241bf9194f9d01
+        sourceBlobDigest: sha256:fee7cea09ac3c79cd8ee1a7ae85bf60db3e173c66e00a6bdd8b7dff5387ce10d
         tags:
             - latest
+            - main
 targets:
     discord:
         source: Discord-OAS
         sourceNamespace: discord-oas
-        sourceRevisionDigest: sha256:f3ee3a6caac0d4a5fb124e5f968639a7dbefb455bb7f19857574abdc289d12a9
-        sourceBlobDigest: sha256:c5428094b23f7f1e580a500c07c0c940f02cc1a67d8b90b8a75d3acb88499968
+        sourceRevisionDigest: sha256:b06e9767bcd7ffffbc3c5866a749e160f9ad40060db882b0e1241bf9194f9d01
+        sourceBlobDigest: sha256:fee7cea09ac3c79cd8ee1a7ae85bf60db3e173c66e00a6bdd8b7dff5387ce10d
         codeSamplesNamespace: discord-oas-code-samples
-        codeSamplesRevisionDigest: sha256:57e89f142750573a44233ebe0a060715fd6db91fc0163eb28994f0b0f241f11f
+        codeSamplesRevisionDigest: sha256:36c568cf783fcf2dc36884004da806700abb657eb7682020058448f5f10eed55
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -31,6 +32,9 @@ workflow:
         discord:
             target: typescript
             source: Discord-OAS
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/ryan-blunden-l5y/ryan-blunden/discord-oas-code-samples
