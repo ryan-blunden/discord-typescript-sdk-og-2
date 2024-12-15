@@ -40,6 +40,19 @@ export class Webhooks extends ClientSDK {
     ));
   }
 
+  async updateOriginalMessageJson(
+    request: operations.UpdateOriginalWebhookMessageJsonRequest,
+    security?: operations.UpdateOriginalWebhookMessageJsonSecurity | undefined,
+    options?: RequestOptions,
+  ): Promise<components.MessageResponse> {
+    return unwrapAsync(webhooksUpdateOriginalMessageJson(
+      this,
+      request,
+      security,
+      options,
+    ));
+  }
+
   async updateOriginalMessageForm(
     request: operations.UpdateOriginalWebhookMessageFormRequest,
     security?: operations.UpdateOriginalWebhookMessageFormSecurity | undefined,
@@ -68,12 +81,12 @@ export class Webhooks extends ClientSDK {
     ));
   }
 
-  async updateOriginalMessageJson(
-    request: operations.UpdateOriginalWebhookMessageJsonRequest,
-    security?: operations.UpdateOriginalWebhookMessageJsonSecurity | undefined,
+  async getMessage(
+    request: operations.GetWebhookMessageRequest,
+    security?: operations.GetWebhookMessageSecurity | undefined,
     options?: RequestOptions,
   ): Promise<components.MessageResponse> {
-    return unwrapAsync(webhooksUpdateOriginalMessageJson(
+    return unwrapAsync(webhooksGetMessage(
       this,
       request,
       security,
@@ -81,12 +94,12 @@ export class Webhooks extends ClientSDK {
     ));
   }
 
-  async getMessage(
-    request: operations.GetWebhookMessageRequest,
-    security?: operations.GetWebhookMessageSecurity | undefined,
+  async updateMessageJson(
+    request: operations.UpdateWebhookMessageJsonRequest,
+    security?: operations.UpdateWebhookMessageJsonSecurity | undefined,
     options?: RequestOptions,
   ): Promise<components.MessageResponse> {
-    return unwrapAsync(webhooksGetMessage(
+    return unwrapAsync(webhooksUpdateMessageJson(
       this,
       request,
       security,
@@ -113,19 +126,6 @@ export class Webhooks extends ClientSDK {
     options?: RequestOptions,
   ): Promise<components.MessageResponse> {
     return unwrapAsync(webhooksUpdateMessageMultipart(
-      this,
-      request,
-      security,
-      options,
-    ));
-  }
-
-  async updateMessageJson(
-    request: operations.UpdateWebhookMessageJsonRequest,
-    security?: operations.UpdateWebhookMessageJsonSecurity | undefined,
-    options?: RequestOptions,
-  ): Promise<components.MessageResponse> {
-    return unwrapAsync(webhooksUpdateMessageJson(
       this,
       request,
       security,
