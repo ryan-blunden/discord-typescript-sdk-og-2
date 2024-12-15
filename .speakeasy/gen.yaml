@@ -25,6 +25,7 @@ typescript:
   author: Speakeasy
   clientServerStatusCodesAsErrors: true
   defaultErrorName: APIError
+  enableReactQuery: false
   enumFormat: union
   envVarPrefix: DISCORD
   flattenGlobalSecurity: true
