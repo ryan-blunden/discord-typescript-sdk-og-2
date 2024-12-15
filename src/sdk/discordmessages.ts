@@ -69,17 +69,6 @@ export class DiscordMessages extends ClientSDK {
     ));
   }
 
-  async updateJson(
-    request: operations.UpdateMessageJsonRequest,
-    options?: RequestOptions,
-  ): Promise<components.MessageResponse> {
-    return unwrapAsync(channelsMessagesUpdateJson(
-      this,
-      request,
-      options,
-    ));
-  }
-
   async updateForm(
     request: operations.UpdateMessageFormRequest,
     options?: RequestOptions,
@@ -96,6 +85,17 @@ export class DiscordMessages extends ClientSDK {
     options?: RequestOptions,
   ): Promise<components.MessageResponse> {
     return unwrapAsync(channelsMessagesUpdateMultipart(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async updateJson(
+    request: operations.UpdateMessageJsonRequest,
+    options?: RequestOptions,
+  ): Promise<components.MessageResponse> {
+    return unwrapAsync(channelsMessagesUpdateJson(
       this,
       request,
       options,
