@@ -24,7 +24,7 @@ actions:
     x-speakeasy-metadata:
       type: method-name
       before: sdk.<no_group>.list_channel_invites()
-      after: sdk.channels.listInvites()
+      after: sdk.channels.invites.list()
       reviewed_at: 1731379212401
       created_at: 1731377079055
   - target: $["paths"]["/guilds/{guild_id}/members/@me"]["patch"]
