@@ -3,8 +3,9 @@
  */
 
 import { DiscordCore } from "../core.js";
-import { encodeJSON, encodeSimple } from "../lib/encodings.js";
+import { appendForm, encodeJSON, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
@@ -53,7 +54,8 @@ export async function channelsMessagesCreateMultipart(
   const body = new FormData();
 
   if (payload.RequestBody.allowed_mentions !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "allowed_mentions",
       encodeJSON("allowed_mentions", payload.RequestBody.allowed_mentions, {
         explode: true,
@@ -61,7 +63,8 @@ export async function channelsMessagesCreateMultipart(
     );
   }
   if (payload.RequestBody.attachments !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "attachments",
       encodeJSON("attachments", payload.RequestBody.attachments, {
         explode: true,
@@ -69,60 +72,72 @@ export async function channelsMessagesCreateMultipart(
     );
   }
   if (payload.RequestBody.components !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "components",
       encodeJSON("components", payload.RequestBody.components, {
         explode: true,
       }),
     );
   }
+  if (payload.RequestBody.confetti_potion !== undefined) {
+    appendForm(
+      body,
+      "confetti_potion",
+      encodeJSON("confetti_potion", payload.RequestBody.confetti_potion, {
+        explode: true,
+      }),
+    );
+  }
   if (payload.RequestBody.content !== undefined) {
-    body.append("content", String(payload.RequestBody.content));
+    appendForm(body, "content", payload.RequestBody.content);
   }
   if (payload.RequestBody.embeds !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "embeds",
       encodeJSON("embeds", payload.RequestBody.embeds, { explode: true }),
     );
   }
   if (payload.RequestBody.enforce_nonce !== undefined) {
-    body.append("enforce_nonce", String(payload.RequestBody.enforce_nonce));
+    appendForm(body, "enforce_nonce", payload.RequestBody.enforce_nonce);
   }
   if (payload.RequestBody["files[0]"] !== undefined) {
-    body.append("files[0]", payload.RequestBody["files[0]"]);
+    appendForm(body, "files[0]", payload.RequestBody["files[0]"]);
   }
   if (payload.RequestBody["files[1]"] !== undefined) {
-    body.append("files[1]", payload.RequestBody["files[1]"]);
+    appendForm(body, "files[1]", payload.RequestBody["files[1]"]);
   }
   if (payload.RequestBody["files[2]"] !== undefined) {
-    body.append("files[2]", payload.RequestBody["files[2]"]);
+    appendForm(body, "files[2]", payload.RequestBody["files[2]"]);
   }
   if (payload.RequestBody["files[3]"] !== undefined) {
-    body.append("files[3]", payload.RequestBody["files[3]"]);
+    appendForm(body, "files[3]", payload.RequestBody["files[3]"]);
   }
   if (payload.RequestBody["files[4]"] !== undefined) {
-    body.append("files[4]", payload.RequestBody["files[4]"]);
+    appendForm(body, "files[4]", payload.RequestBody["files[4]"]);
   }
   if (payload.RequestBody["files[5]"] !== undefined) {
-    body.append("files[5]", payload.RequestBody["files[5]"]);
+    appendForm(body, "files[5]", payload.RequestBody["files[5]"]);
   }
   if (payload.RequestBody["files[6]"] !== undefined) {
-    body.append("files[6]", payload.RequestBody["files[6]"]);
+    appendForm(body, "files[6]", payload.RequestBody["files[6]"]);
   }
   if (payload.RequestBody["files[7]"] !== undefined) {
-    body.append("files[7]", payload.RequestBody["files[7]"]);
+    appendForm(body, "files[7]", payload.RequestBody["files[7]"]);
   }
   if (payload.RequestBody["files[8]"] !== undefined) {
-    body.append("files[8]", payload.RequestBody["files[8]"]);
+    appendForm(body, "files[8]", payload.RequestBody["files[8]"]);
   }
   if (payload.RequestBody["files[9]"] !== undefined) {
-    body.append("files[9]", payload.RequestBody["files[9]"]);
+    appendForm(body, "files[9]", payload.RequestBody["files[9]"]);
   }
   if (payload.RequestBody.flags !== undefined) {
-    body.append("flags", String(payload.RequestBody.flags));
+    appendForm(body, "flags", payload.RequestBody.flags);
   }
   if (payload.RequestBody.message_reference !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "message_reference",
       encodeJSON("message_reference", payload.RequestBody.message_reference, {
         explode: true,
@@ -130,19 +145,20 @@ export async function channelsMessagesCreateMultipart(
     );
   }
   if (payload.RequestBody.nonce !== undefined) {
-    body.append("nonce", String(payload.RequestBody.nonce));
+    appendForm(body, "nonce", payload.RequestBody.nonce);
   }
   if (payload.RequestBody.poll !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "poll",
       encodeJSON("poll", payload.RequestBody.poll, { explode: true }),
     );
   }
   if (payload.RequestBody.sticker_ids !== undefined) {
-    body.append("sticker_ids", String(payload.RequestBody.sticker_ids));
+    appendForm(body, "sticker_ids", payload.RequestBody.sticker_ids);
   }
   if (payload.RequestBody.tts !== undefined) {
-    body.append("tts", String(payload.RequestBody.tts));
+    appendForm(body, "tts", payload.RequestBody.tts);
   }
 
   const pathParams = {
@@ -154,9 +170,9 @@ export async function channelsMessagesCreateMultipart(
 
   const path = pathToFunc("/channels/{channel_id}/messages")(pathParams);
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const secConfig = await extractSecurity(client._options.botToken);
   const securityInput = secConfig == null ? {} : { botToken: secConfig };
@@ -178,6 +194,7 @@ export async function channelsMessagesCreateMultipart(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "POST",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     body: body,

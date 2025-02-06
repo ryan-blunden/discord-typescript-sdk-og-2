@@ -23,6 +23,8 @@ async function run() {
     guildId: "<value>",
     requestBody: [
       {},
+      {},
+      {},
     ],
   });
 
@@ -50,6 +52,8 @@ async function run() {
   const res = await guildsChannelsBulkUpdate(discord, {
     guildId: "<value>",
     requestBody: [
+      {},
+      {},
       {},
     ],
   });

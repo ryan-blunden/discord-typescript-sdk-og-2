@@ -4,6 +4,7 @@
 
 import { DiscordCore } from "../core.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { resolveSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
@@ -40,9 +41,9 @@ export async function stickerPacksList(
 > {
   const path = pathToFunc("/sticker-packs")();
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const requestSecurity = resolveSecurity(
     [
@@ -70,6 +71,7 @@ export async function stickerPacksList(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "GET",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,

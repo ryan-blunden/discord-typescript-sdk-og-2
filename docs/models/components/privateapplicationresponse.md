@@ -8,20 +8,20 @@ import { PrivateApplicationResponse } from "@ryan.blunden/discord/models/compone
 let value: PrivateApplicationResponse = {
   id: "<value>",
   name: "<value>",
-  description: "tapioca blaring the mismatch plagiarise past interestingly",
+  description: "sweetly triumphantly close phew typewriter gadzooks yet",
   verifyKey: "<value>",
-  flags: 570197,
+  flags: 102044,
   redirectUris: [
-    "https://writhing-brochure.biz/",
+    "https://damaged-pendant.biz/",
   ],
   owner: {
     id: "<value>",
-    username: "Caroline.Fritsch24",
+    username: "Jamil.Cronin65",
     discriminator: "<value>",
-    publicFlags: 110375,
-    flags: 656330,
+    publicFlags: 196582,
+    flags: 368725,
   },
-  approximateUserInstallCount: 138183,
+  approximateUserInstallCount: 820994,
 };
 ```
 

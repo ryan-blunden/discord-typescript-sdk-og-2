@@ -41,6 +41,7 @@ export type UpdateWebhookMessageMultipartRequest = {
   webhookToken: string;
   messageId: string;
   threadId?: string | undefined;
+  withComponents?: boolean | undefined;
   requestBody: UpdateWebhookMessageMultipartRequestBody;
 };
 
@@ -283,6 +284,7 @@ export const UpdateWebhookMessageMultipartRequest$inboundSchema: z.ZodType<
   webhook_token: z.string(),
   message_id: z.string(),
   thread_id: z.string().optional(),
+  with_components: z.boolean().optional(),
   RequestBody: z.lazy(() =>
     UpdateWebhookMessageMultipartRequestBody$inboundSchema
   ),
@@ -292,6 +294,7 @@ export const UpdateWebhookMessageMultipartRequest$inboundSchema: z.ZodType<
     "webhook_token": "webhookToken",
     "message_id": "messageId",
     "thread_id": "threadId",
+    "with_components": "withComponents",
     "RequestBody": "requestBody",
   });
 });
@@ -302,6 +305,7 @@ export type UpdateWebhookMessageMultipartRequest$Outbound = {
   webhook_token: string;
   message_id: string;
   thread_id?: string | undefined;
+  with_components?: boolean | undefined;
   RequestBody: UpdateWebhookMessageMultipartRequestBody$Outbound;
 };
 
@@ -315,6 +319,7 @@ export const UpdateWebhookMessageMultipartRequest$outboundSchema: z.ZodType<
   webhookToken: z.string(),
   messageId: z.string(),
   threadId: z.string().optional(),
+  withComponents: z.boolean().optional(),
   requestBody: z.lazy(() =>
     UpdateWebhookMessageMultipartRequestBody$outboundSchema
   ),
@@ -324,6 +329,7 @@ export const UpdateWebhookMessageMultipartRequest$outboundSchema: z.ZodType<
     webhookToken: "webhook_token",
     messageId: "message_id",
     threadId: "thread_id",
+    withComponents: "with_components",
     requestBody: "RequestBody",
   });
 });

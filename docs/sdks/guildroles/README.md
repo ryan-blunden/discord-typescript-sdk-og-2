@@ -23,6 +23,8 @@ async function run() {
     guildId: "<value>",
     requestBody: [
       {},
+      {},
+      {},
     ],
   });
 
@@ -51,6 +53,8 @@ async function run() {
   const res = await guildRolesBulkUpdate(discord, {
     guildId: "<value>",
     requestBody: [
+      {},
+      {},
       {},
     ],
   });

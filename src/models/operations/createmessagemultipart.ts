@@ -18,6 +18,7 @@ export type CreateMessageMultipartRequestBody = {
     | Array<components.ActionRowComponentForMessageRequest>
     | null
     | undefined;
+  confettiPotion?: components.ConfettiPotionCreateRequest | null | undefined;
   content?: string | null | undefined;
   embeds?: Array<components.RichEmbed> | null | undefined;
   enforceNonce?: boolean | null | undefined;
@@ -100,6 +101,9 @@ export const CreateMessageMultipartRequestBody$inboundSchema: z.ZodType<
   components: z.nullable(
     z.array(components.ActionRowComponentForMessageRequest$inboundSchema),
   ).optional(),
+  confetti_potion: z.nullable(
+    components.ConfettiPotionCreateRequest$inboundSchema,
+  ).optional(),
   content: z.nullable(z.string()).optional(),
   embeds: z.nullable(z.array(components.RichEmbed$inboundSchema)).optional(),
   enforce_nonce: z.nullable(z.boolean()).optional(),
@@ -124,6 +128,7 @@ export const CreateMessageMultipartRequestBody$inboundSchema: z.ZodType<
 }).transform((v) => {
   return remap$(v, {
     "allowed_mentions": "allowedMentions",
+    "confetti_potion": "confettiPotion",
     "enforce_nonce": "enforceNonce",
     "files[0]": "files0",
     "files[1]": "files1",
@@ -152,6 +157,10 @@ export type CreateMessageMultipartRequestBody$Outbound = {
     | undefined;
   components?:
     | Array<components.ActionRowComponentForMessageRequest$Outbound>
+    | null
+    | undefined;
+  confetti_potion?:
+    | components.ConfettiPotionCreateRequest$Outbound
     | null
     | undefined;
   content?: string | null | undefined;
@@ -193,6 +202,9 @@ export const CreateMessageMultipartRequestBody$outboundSchema: z.ZodType<
   components: z.nullable(
     z.array(components.ActionRowComponentForMessageRequest$outboundSchema),
   ).optional(),
+  confettiPotion: z.nullable(
+    components.ConfettiPotionCreateRequest$outboundSchema,
+  ).optional(),
   content: z.nullable(z.string()).optional(),
   embeds: z.nullable(z.array(components.RichEmbed$outboundSchema)).optional(),
   enforceNonce: z.nullable(z.boolean()).optional(),
@@ -217,6 +229,7 @@ export const CreateMessageMultipartRequestBody$outboundSchema: z.ZodType<
 }).transform((v) => {
   return remap$(v, {
     allowedMentions: "allowed_mentions",
+    confettiPotion: "confetti_potion",
     enforceNonce: "enforce_nonce",
     files0: "files[0]",
     files1: "files[1]",

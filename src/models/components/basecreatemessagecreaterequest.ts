@@ -14,6 +14,12 @@ import {
   ActionRowComponentForMessageRequest$outboundSchema,
 } from "./actionrowcomponentformessagerequest.js";
 import {
+  ConfettiPotionCreateRequest,
+  ConfettiPotionCreateRequest$inboundSchema,
+  ConfettiPotionCreateRequest$Outbound,
+  ConfettiPotionCreateRequest$outboundSchema,
+} from "./confettipotioncreaterequest.js";
+import {
   MessageAllowedMentionsRequest,
   MessageAllowedMentionsRequest$inboundSchema,
   MessageAllowedMentionsRequest$Outbound,
@@ -47,6 +53,7 @@ export type BaseCreateMessageCreateRequest = {
   flags?: number | null | undefined;
   attachments?: Array<MessageAttachmentRequest> | null | undefined;
   poll?: PollCreateRequest | null | undefined;
+  confettiPotion?: ConfettiPotionCreateRequest | null | undefined;
 };
 
 /** @internal */
@@ -67,10 +74,13 @@ export const BaseCreateMessageCreateRequest$inboundSchema: z.ZodType<
   attachments: z.nullable(z.array(MessageAttachmentRequest$inboundSchema))
     .optional(),
   poll: z.nullable(PollCreateRequest$inboundSchema).optional(),
+  confetti_potion: z.nullable(ConfettiPotionCreateRequest$inboundSchema)
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
     "allowed_mentions": "allowedMentions",
     "sticker_ids": "stickerIds",
+    "confetti_potion": "confettiPotion",
   });
 });
 
@@ -87,6 +97,7 @@ export type BaseCreateMessageCreateRequest$Outbound = {
   flags?: number | null | undefined;
   attachments?: Array<MessageAttachmentRequest$Outbound> | null | undefined;
   poll?: PollCreateRequest$Outbound | null | undefined;
+  confetti_potion?: ConfettiPotionCreateRequest$Outbound | null | undefined;
 };
 
 /** @internal */
@@ -107,10 +118,13 @@ export const BaseCreateMessageCreateRequest$outboundSchema: z.ZodType<
   attachments: z.nullable(z.array(MessageAttachmentRequest$outboundSchema))
     .optional(),
   poll: z.nullable(PollCreateRequest$outboundSchema).optional(),
+  confettiPotion: z.nullable(ConfettiPotionCreateRequest$outboundSchema)
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
     allowedMentions: "allowed_mentions",
     stickerIds: "sticker_ids",
+    confettiPotion: "confetti_potion",
   });
 });
 

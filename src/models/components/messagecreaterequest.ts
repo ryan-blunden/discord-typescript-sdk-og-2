@@ -14,6 +14,12 @@ import {
   ActionRowComponentForMessageRequest$outboundSchema,
 } from "./actionrowcomponentformessagerequest.js";
 import {
+  ConfettiPotionCreateRequest,
+  ConfettiPotionCreateRequest$inboundSchema,
+  ConfettiPotionCreateRequest$Outbound,
+  ConfettiPotionCreateRequest$outboundSchema,
+} from "./confettipotioncreaterequest.js";
+import {
   MessageAllowedMentionsRequest,
   MessageAllowedMentionsRequest$inboundSchema,
   MessageAllowedMentionsRequest$Outbound,
@@ -55,6 +61,7 @@ export type MessageCreateRequest = {
   flags?: number | null | undefined;
   attachments?: Array<MessageAttachmentRequest> | null | undefined;
   poll?: PollCreateRequest | null | undefined;
+  confettiPotion?: ConfettiPotionCreateRequest | null | undefined;
   messageReference?: MessageReferenceRequest | null | undefined;
   nonce?: number | string | null | undefined;
   enforceNonce?: boolean | null | undefined;
@@ -127,6 +134,8 @@ export const MessageCreateRequest$inboundSchema: z.ZodType<
   attachments: z.nullable(z.array(MessageAttachmentRequest$inboundSchema))
     .optional(),
   poll: z.nullable(PollCreateRequest$inboundSchema).optional(),
+  confetti_potion: z.nullable(ConfettiPotionCreateRequest$inboundSchema)
+    .optional(),
   message_reference: z.nullable(MessageReferenceRequest$inboundSchema)
     .optional(),
   nonce: z.nullable(z.union([z.number().int(), z.string()])).optional(),
@@ -136,6 +145,7 @@ export const MessageCreateRequest$inboundSchema: z.ZodType<
   return remap$(v, {
     "allowed_mentions": "allowedMentions",
     "sticker_ids": "stickerIds",
+    "confetti_potion": "confettiPotion",
     "message_reference": "messageReference",
     "enforce_nonce": "enforceNonce",
   });
@@ -154,6 +164,7 @@ export type MessageCreateRequest$Outbound = {
   flags?: number | null | undefined;
   attachments?: Array<MessageAttachmentRequest$Outbound> | null | undefined;
   poll?: PollCreateRequest$Outbound | null | undefined;
+  confetti_potion?: ConfettiPotionCreateRequest$Outbound | null | undefined;
   message_reference?: MessageReferenceRequest$Outbound | null | undefined;
   nonce?: number | string | null | undefined;
   enforce_nonce?: boolean | null | undefined;
@@ -178,6 +189,8 @@ export const MessageCreateRequest$outboundSchema: z.ZodType<
   attachments: z.nullable(z.array(MessageAttachmentRequest$outboundSchema))
     .optional(),
   poll: z.nullable(PollCreateRequest$outboundSchema).optional(),
+  confettiPotion: z.nullable(ConfettiPotionCreateRequest$outboundSchema)
+    .optional(),
   messageReference: z.nullable(MessageReferenceRequest$outboundSchema)
     .optional(),
   nonce: z.nullable(z.union([z.number().int(), z.string()])).optional(),
@@ -187,6 +200,7 @@ export const MessageCreateRequest$outboundSchema: z.ZodType<
   return remap$(v, {
     allowedMentions: "allowed_mentions",
     stickerIds: "sticker_ids",
+    confettiPotion: "confetti_potion",
     messageReference: "message_reference",
     enforceNonce: "enforce_nonce",
   });

@@ -66,6 +66,7 @@ export type GuildInviteResponse = {
   temporary?: boolean | null | undefined;
   approximateMemberCount?: number | null | undefined;
   approximatePresenceCount?: number | null | undefined;
+  isNicknameChangeable?: boolean | null | undefined;
 };
 
 /** @internal */
@@ -102,6 +103,7 @@ export const GuildInviteResponse$inboundSchema: z.ZodType<
   temporary: z.nullable(z.boolean()).optional(),
   approximate_member_count: z.nullable(z.number().int()).optional(),
   approximate_presence_count: z.nullable(z.number().int()).optional(),
+  is_nickname_changeable: z.nullable(z.boolean()).optional(),
 }).transform((v) => {
   return remap$(v, {
     "max_age": "maxAge",
@@ -117,6 +119,7 @@ export const GuildInviteResponse$inboundSchema: z.ZodType<
     "max_uses": "maxUses",
     "approximate_member_count": "approximateMemberCount",
     "approximate_presence_count": "approximatePresenceCount",
+    "is_nickname_changeable": "isNicknameChangeable",
   });
 });
 
@@ -143,6 +146,7 @@ export type GuildInviteResponse$Outbound = {
   temporary?: boolean | null | undefined;
   approximate_member_count?: number | null | undefined;
   approximate_presence_count?: number | null | undefined;
+  is_nickname_changeable?: boolean | null | undefined;
 };
 
 /** @internal */
@@ -175,6 +179,7 @@ export const GuildInviteResponse$outboundSchema: z.ZodType<
   temporary: z.nullable(z.boolean()).optional(),
   approximateMemberCount: z.nullable(z.number().int()).optional(),
   approximatePresenceCount: z.nullable(z.number().int()).optional(),
+  isNicknameChangeable: z.nullable(z.boolean()).optional(),
 }).transform((v) => {
   return remap$(v, {
     maxAge: "max_age",
@@ -190,6 +195,7 @@ export const GuildInviteResponse$outboundSchema: z.ZodType<
     maxUses: "max_uses",
     approximateMemberCount: "approximate_member_count",
     approximatePresenceCount: "approximate_presence_count",
+    isNicknameChangeable: "is_nickname_changeable",
   });
 });
 
