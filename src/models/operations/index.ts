@@ -107,6 +107,7 @@ export * from "./getmessage.js";
 export * from "./getmyguildmember.js";
 export * from "./getmyoauth2authorization.js";
 export * from "./getmyuser.js";
+export * from "./getopenidconnectuserinfo.js";
 export * from "./getoriginalwebhookmessage.js";
 export * from "./getpublickeys.js";
 export * from "./getselfvoicestate.js";

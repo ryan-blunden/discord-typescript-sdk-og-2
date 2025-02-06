@@ -23,6 +23,7 @@ async function run() {
     channelId: "<value>",
     requestBody: {
       name: "<value>",
+      message: {},
     },
   });
 
@@ -52,6 +53,7 @@ async function run() {
     channelId: "<value>",
     requestBody: {
       name: "<value>",
+      message: {},
     },
   });
 

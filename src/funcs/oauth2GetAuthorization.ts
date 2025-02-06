@@ -4,6 +4,7 @@
 
 import { DiscordCore } from "../core.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { resolveSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
@@ -40,9 +41,9 @@ export async function oauth2GetAuthorization(
 > {
   const path = pathToFunc("/oauth2/@me")();
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const requestSecurity = resolveSecurity(
     [
@@ -57,6 +58,7 @@ export async function oauth2GetAuthorization(
   const context = {
     operationID: "get_my_oauth2_authorization",
     oAuth2Scopes: [
+      "activities.invites.write",
       "activities.read",
       "activities.write",
       "applications.builds.read",
@@ -104,6 +106,7 @@ export async function oauth2GetAuthorization(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "GET",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,

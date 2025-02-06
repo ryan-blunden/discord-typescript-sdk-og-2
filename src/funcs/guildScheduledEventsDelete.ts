@@ -6,6 +6,7 @@ import * as z from "zod";
 import { DiscordCore } from "../core.js";
 import { encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
@@ -68,9 +69,9 @@ export async function guildScheduledEventsDelete(
     "/guilds/{guild_id}/scheduled-events/{guild_scheduled_event_id}",
   )(pathParams);
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const secConfig = await extractSecurity(client._options.botToken);
   const securityInput = secConfig == null ? {} : { botToken: secConfig };
@@ -92,6 +93,7 @@ export async function guildScheduledEventsDelete(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "DELETE",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     body: body,

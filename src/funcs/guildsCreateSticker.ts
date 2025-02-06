@@ -3,8 +3,9 @@
  */
 
 import { DiscordCore } from "../core.js";
-import { encodeSimple } from "../lib/encodings.js";
+import { appendForm, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
@@ -51,11 +52,11 @@ export async function guildsCreateSticker(
   const payload = parsed.value;
   const body = new FormData();
 
-  body.append("file", payload.RequestBody.file);
-  body.append("name", payload.RequestBody.name);
-  body.append("tags", payload.RequestBody.tags);
+  appendForm(body, "file", payload.RequestBody.file);
+  appendForm(body, "name", payload.RequestBody.name);
+  appendForm(body, "tags", payload.RequestBody.tags);
   if (payload.RequestBody.description !== undefined) {
-    body.append("description", String(payload.RequestBody.description));
+    appendForm(body, "description", payload.RequestBody.description);
   }
 
   const pathParams = {
@@ -67,9 +68,9 @@ export async function guildsCreateSticker(
 
   const path = pathToFunc("/guilds/{guild_id}/stickers")(pathParams);
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const secConfig = await extractSecurity(client._options.botToken);
   const securityInput = secConfig == null ? {} : { botToken: secConfig };
@@ -91,6 +92,7 @@ export async function guildsCreateSticker(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "POST",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     body: body,

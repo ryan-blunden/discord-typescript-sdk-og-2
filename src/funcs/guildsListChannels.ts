@@ -6,6 +6,7 @@ import * as z from "zod";
 import { DiscordCore } from "../core.js";
 import { encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { resolveSecurity } from "../lib/security.js";
@@ -61,9 +62,9 @@ export async function guildsListChannels(
 
   const path = pathToFunc("/guilds/{guild_id}/channels")(pathParams);
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const requestSecurity = resolveSecurity(
     [
@@ -91,6 +92,7 @@ export async function guildsListChannels(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "GET",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     body: body,

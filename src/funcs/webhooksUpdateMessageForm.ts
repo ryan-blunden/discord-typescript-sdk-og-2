@@ -9,6 +9,7 @@ import {
   encodeSimple,
 } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { resolveSecurity } from "../lib/security.js";
@@ -82,12 +83,13 @@ export async function webhooksUpdateMessageForm(
 
   const query = encodeFormQuery({
     "thread_id": payload.thread_id,
+    "with_components": payload.with_components,
   });
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     "Content-Type": "application/x-www-form-urlencoded",
     Accept: "application/json",
-  });
+  }));
 
   const requestSecurity = resolveSecurity(
     [
@@ -115,6 +117,7 @@ export async function webhooksUpdateMessageForm(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "PATCH",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     query: query,

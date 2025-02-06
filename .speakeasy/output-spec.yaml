@@ -1,7 +1,7 @@
 openapi: "3.1.0"
 info:
   title: "Discord HTTP API (Preview)"
-  description: "Preview of the Discord v10 HTTP API specification. See https://discord.com/developers/docs for more details."
+  description: "The Discord TypeScript SDK exposes the full capabilities of the v10 API, enabling you to build bots and applications that manage servers, channels, messages, interactions, and more.\n\nThe SDK is regularly updated to include the latest changes from the OpenAPI spec at https://github.com/discord/discord-api-spec/blob/main/specs/openapi.json\n"
   termsOfService: "https://discord.com/developers/docs/policies-and-agreements/developer-terms-of-service"
   license:
     name: "MIT"
@@ -151,6 +151,20 @@ paths:
         - BotToken: []
       x-speakeasy-group: gateway
       x-speakeasy-name-override: getBot
+  "/oauth2/userinfo":
+    get:
+      operationId: "get_openid_connect_userinfo"
+      responses:
+        "200":
+          description: "200 response for get_openid_connect_userinfo"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/OAuth2GetOpenIDConnectUserInfoResponse"}
+        "4XX": {"$ref": "#/components/responses/ClientErrorResponse"}
+      security:
+        - BotToken: []
+        - OAuth2:
+            - openid
   "/oauth2/keys":
     get:
       operationId: "get_public_keys"
@@ -179,6 +193,7 @@ paths:
       security:
         - BotToken: []
         - OAuth2:
+            - activities.invites.write
             - activities.read
             - activities.write
             - applications.builds.read
@@ -1221,6 +1236,10 @@ paths:
         - name: "thread_id"
           in: "query"
           schema: {"$ref": "#/components/schemas/SnowflakeType"}
+        - name: "with_components"
+          in: "query"
+          schema:
+            type: "boolean"
       requestBody:
         content:
           "application/json":
@@ -1801,6 +1820,7 @@ paths:
       security:
         - BotToken: []
         - OAuth2:
+            - activities.invites.write
             - activities.read
             - activities.write
             - applications.builds.read
@@ -2764,6 +2784,10 @@ paths:
         - name: "thread_id"
           in: "query"
           schema: {"$ref": "#/components/schemas/SnowflakeType"}
+        - name: "with_components"
+          in: "query"
+          schema:
+            type: "boolean"
       requestBody:
         content:
           "application/json":
@@ -7740,6 +7764,10 @@ components:
           oneOf:
             - type: "null"
             - {"$ref": "#/components/schemas/PollCreateRequest"}
+        "confetti_potion":
+          oneOf:
+            - type: "null"
+            - {"$ref": "#/components/schemas/ConfettiPotionCreateRequest"}
     "BasicApplicationResponse":
       type: "object"
       properties:
@@ -8418,6 +8446,8 @@ components:
             - "null"
       required:
         - "name"
+    "ConfettiPotionCreateRequest":
+      type: "object"
     "ConnectedAccountGuildResponse":
       type: "object"
       properties:
@@ -10817,6 +10847,10 @@ components:
             - "integer"
             - "null"
           format: "int32"
+        "is_nickname_changeable":
+          type:
+            - "boolean"
+            - "null"
       required:
         - "code"
     "GuildMFALevel":
@@ -13277,7 +13311,7 @@ components:
         - title: "STRING_SELECT"
           description: "Select menu for picking from defined text options"
           const: 3
-        - title: "INPUT_TEXT"
+        - title: "TEXT_INPUT"
           description: "Text input object"
           const: 4
         - title: "USER_SELECT"
@@ -13337,6 +13371,10 @@ components:
           oneOf:
             - type: "null"
             - {"$ref": "#/components/schemas/PollCreateRequest"}
+        "confetti_potion":
+          oneOf:
+            - type: "null"
+            - {"$ref": "#/components/schemas/ConfettiPotionCreateRequest"}
         "message_reference":
           oneOf:
             - type: "null"
@@ -14248,6 +14286,37 @@ components:
           items: {"$ref": "#/components/schemas/OAuth2Key"}
       required:
         - "keys"
+    "OAuth2GetOpenIDConnectUserInfoResponse":
+      type: "object"
+      properties:
+        "sub":
+          type: "string"
+        "email":
+          type:
+            - "string"
+            - "null"
+        "email_verified":
+          type:
+            - "boolean"
+            - "null"
+        "preferred_username":
+          type:
+            - "string"
+            - "null"
+        "nickname":
+          type:
+            - "string"
+            - "null"
+        "picture":
+          type:
+            - "string"
+            - "null"
+        "locale":
+          type:
+            - "string"
+            - "null"
+      required:
+        - "sub"
     "OAuth2Key":
       type: "object"
       properties:
@@ -14357,6 +14426,9 @@ components:
         - title: "ACTIVITIES_WRITE"
           description: "allows your app to update a user's activity - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
           const: "activities.write"
+        - title: "ACTIVITIES_INVITES_WRITE"
+          description: "allows your app to send activity invites - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
+          const: "activities.invites.write"
         - title: "RELATIONSHIPS_READ"
           description: "allows your app to know a user's friends and implicit relationships - requires Discord approval"
           const: "relationships.read"
@@ -17742,6 +17814,7 @@ components:
           authorizationUrl: "discord.com/oauth2/authorize"
           refreshUrl: "https://discord.com/api/oauth2/token"
           scopes:
+            "activities.invites.write": "allows your app to send activity invites - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
             "activities.read": "allows your app to fetch data from a user's \"Now Playing/Recently Played\" list - requires Discord approval"
             "activities.write": "allows your app to update a user's activity - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
             "applications.builds.read": "allows your app to read build data for a user's applications"
@@ -17777,6 +17850,7 @@ components:
           tokenUrl: "https://discord.com/api/oauth2/token"
           refreshUrl: "https://discord.com/api/oauth2/token"
           scopes:
+            "activities.invites.write": "allows your app to send activity invites - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
             "activities.read": "allows your app to fetch data from a user's \"Now Playing/Recently Played\" list - requires Discord approval"
             "activities.write": "allows your app to update a user's activity - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
             "applications.builds.read": "allows your app to read build data for a user's applications"
@@ -17814,6 +17888,7 @@ components:
           tokenUrl: "https://discord.com/api/oauth2/token"
           refreshUrl: "https://discord.com/api/oauth2/token"
           scopes:
+            "activities.invites.write": "allows your app to send activity invites - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
             "activities.read": "allows your app to fetch data from a user's \"Now Playing/Recently Played\" list - requires Discord approval"
             "activities.write": "allows your app to update a user's activity - requires Discord approval (NOT REQUIRED FOR GAMESDK ACTIVITY MANAGER)"
             "applications.builds.read": "allows your app to read build data for a user's applications"

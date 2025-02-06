@@ -20,17 +20,17 @@ specific category of applications.
 
 ```typescript
 import { DiscordCore } from "@ryan.blunden/discord/core.js";
-import { oauth2GetMyApplication } from "@ryan.blunden/discord/funcs/oauth2GetMyApplication.js";
+import { getOpenidConnectUserinfo } from "@ryan.blunden/discord/funcs/getOpenidConnectUserinfo.js";
 import { SDKValidationError } from "@ryan.blunden/discord/models/errors/sdkvalidationerror.js";
 
 // Use `DiscordCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
-const discord = new DiscordCore({
-  botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
-});
+const discord = new DiscordCore();
 
 async function run() {
-  const res = await oauth2GetMyApplication(discord);
+  const res = await getOpenidConnectUserinfo(discord, {
+    botToken: process.env["DISCORD_BOT_TOKEN"] ?? "",
+  });
 
   switch (true) {
     case res.ok:

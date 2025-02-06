@@ -99,7 +99,7 @@ async function run() {
     applicationId: "<value>",
     requestBody: {
       name: "<value>",
-      image: "https://picsum.photos/seed/Znlsp/3960/2101",
+      image: "https://loremflickr.com/1946/2554?lock=1210253251537993",
     },
   });
 
@@ -129,7 +129,7 @@ async function run() {
     applicationId: "<value>",
     requestBody: {
       name: "<value>",
-      image: "https://picsum.photos/seed/Znlsp/3960/2101",
+      image: "https://loremflickr.com/1946/2554?lock=1210253251537993",
     },
   });
 

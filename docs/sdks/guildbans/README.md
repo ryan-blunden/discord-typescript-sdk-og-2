@@ -26,8 +26,6 @@ async function run() {
     requestBody: {
       userIds: [
         "<value>",
-        "<value>",
-        "<value>",
       ],
     },
   });
@@ -58,8 +56,6 @@ async function run() {
     guildId: "<value>",
     requestBody: {
       userIds: [
-        "<value>",
-        "<value>",
         "<value>",
       ],
     },

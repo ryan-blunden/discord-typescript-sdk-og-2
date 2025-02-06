@@ -3,8 +3,9 @@
  */
 
 import { DiscordCore } from "../core.js";
-import { encodeSimple } from "../lib/encodings.js";
+import { appendForm, encodeSimple } from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { resolveSecurity } from "../lib/security.js";
@@ -53,7 +54,7 @@ export async function applicationsUploadAttachment(
   const payload = parsed.value;
   const body = new FormData();
 
-  body.append("file", payload.RequestBody.file);
+  appendForm(body, "file", payload.RequestBody.file);
 
   const pathParams = {
     application_id: encodeSimple("application_id", payload.application_id, {
@@ -66,9 +67,9 @@ export async function applicationsUploadAttachment(
     pathParams,
   );
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const requestSecurity = resolveSecurity(
     [
@@ -83,6 +84,7 @@ export async function applicationsUploadAttachment(
   const context = {
     operationID: "upload_application_attachment",
     oAuth2Scopes: [
+      "activities.invites.write",
       "activities.read",
       "activities.write",
       "applications.builds.read",
@@ -130,6 +132,7 @@ export async function applicationsUploadAttachment(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "POST",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     body: body,

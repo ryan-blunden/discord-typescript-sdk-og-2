@@ -4,6 +4,7 @@
 
 import { DiscordCore } from "../core.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { extractSecurity, resolveGlobalSecurity } from "../lib/security.js";
 import { pathToFunc } from "../lib/url.js";
@@ -38,9 +39,9 @@ export async function gatewayGetBot(
 > {
   const path = pathToFunc("/gateway/bot")();
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const secConfig = await extractSecurity(client._options.botToken);
   const securityInput = secConfig == null ? {} : { botToken: secConfig };
@@ -62,6 +63,7 @@ export async function gatewayGetBot(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "GET",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,

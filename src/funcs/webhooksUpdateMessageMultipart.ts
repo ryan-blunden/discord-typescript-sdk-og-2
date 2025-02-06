@@ -3,8 +3,14 @@
  */
 
 import { DiscordCore } from "../core.js";
-import { encodeFormQuery, encodeJSON, encodeSimple } from "../lib/encodings.js";
+import {
+  appendForm,
+  encodeFormQuery,
+  encodeJSON,
+  encodeSimple,
+} from "../lib/encodings.js";
 import * as M from "../lib/matchers.js";
+import { compactMap } from "../lib/primitives.js";
 import { safeParse } from "../lib/schemas.js";
 import { RequestOptions } from "../lib/sdks.js";
 import { resolveSecurity } from "../lib/security.js";
@@ -56,7 +62,8 @@ export async function webhooksUpdateMessageMultipart(
   const body = new FormData();
 
   if (payload.RequestBody.allowed_mentions !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "allowed_mentions",
       encodeJSON("allowed_mentions", payload.RequestBody.allowed_mentions, {
         explode: true,
@@ -64,7 +71,8 @@ export async function webhooksUpdateMessageMultipart(
     );
   }
   if (payload.RequestBody.attachments !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "attachments",
       encodeJSON("attachments", payload.RequestBody.attachments, {
         explode: true,
@@ -72,7 +80,8 @@ export async function webhooksUpdateMessageMultipart(
     );
   }
   if (payload.RequestBody.components !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "components",
       encodeJSON("components", payload.RequestBody.components, {
         explode: true,
@@ -80,49 +89,51 @@ export async function webhooksUpdateMessageMultipart(
     );
   }
   if (payload.RequestBody.content !== undefined) {
-    body.append("content", String(payload.RequestBody.content));
+    appendForm(body, "content", payload.RequestBody.content);
   }
   if (payload.RequestBody.embeds !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "embeds",
       encodeJSON("embeds", payload.RequestBody.embeds, { explode: true }),
     );
   }
   if (payload.RequestBody["files[0]"] !== undefined) {
-    body.append("files[0]", payload.RequestBody["files[0]"]);
+    appendForm(body, "files[0]", payload.RequestBody["files[0]"]);
   }
   if (payload.RequestBody["files[1]"] !== undefined) {
-    body.append("files[1]", payload.RequestBody["files[1]"]);
+    appendForm(body, "files[1]", payload.RequestBody["files[1]"]);
   }
   if (payload.RequestBody["files[2]"] !== undefined) {
-    body.append("files[2]", payload.RequestBody["files[2]"]);
+    appendForm(body, "files[2]", payload.RequestBody["files[2]"]);
   }
   if (payload.RequestBody["files[3]"] !== undefined) {
-    body.append("files[3]", payload.RequestBody["files[3]"]);
+    appendForm(body, "files[3]", payload.RequestBody["files[3]"]);
   }
   if (payload.RequestBody["files[4]"] !== undefined) {
-    body.append("files[4]", payload.RequestBody["files[4]"]);
+    appendForm(body, "files[4]", payload.RequestBody["files[4]"]);
   }
   if (payload.RequestBody["files[5]"] !== undefined) {
-    body.append("files[5]", payload.RequestBody["files[5]"]);
+    appendForm(body, "files[5]", payload.RequestBody["files[5]"]);
   }
   if (payload.RequestBody["files[6]"] !== undefined) {
-    body.append("files[6]", payload.RequestBody["files[6]"]);
+    appendForm(body, "files[6]", payload.RequestBody["files[6]"]);
   }
   if (payload.RequestBody["files[7]"] !== undefined) {
-    body.append("files[7]", payload.RequestBody["files[7]"]);
+    appendForm(body, "files[7]", payload.RequestBody["files[7]"]);
   }
   if (payload.RequestBody["files[8]"] !== undefined) {
-    body.append("files[8]", payload.RequestBody["files[8]"]);
+    appendForm(body, "files[8]", payload.RequestBody["files[8]"]);
   }
   if (payload.RequestBody["files[9]"] !== undefined) {
-    body.append("files[9]", payload.RequestBody["files[9]"]);
+    appendForm(body, "files[9]", payload.RequestBody["files[9]"]);
   }
   if (payload.RequestBody.flags !== undefined) {
-    body.append("flags", String(payload.RequestBody.flags));
+    appendForm(body, "flags", payload.RequestBody.flags);
   }
   if (payload.RequestBody.poll !== undefined) {
-    body.append(
+    appendForm(
+      body,
       "poll",
       encodeJSON("poll", payload.RequestBody.poll, { explode: true }),
     );
@@ -149,11 +160,12 @@ export async function webhooksUpdateMessageMultipart(
 
   const query = encodeFormQuery({
     "thread_id": payload.thread_id,
+    "with_components": payload.with_components,
   });
 
-  const headers = new Headers({
+  const headers = new Headers(compactMap({
     Accept: "application/json",
-  });
+  }));
 
   const requestSecurity = resolveSecurity(
     [
@@ -181,6 +193,7 @@ export async function webhooksUpdateMessageMultipart(
   const requestRes = client._createRequest(context, {
     security: requestSecurity,
     method: "PATCH",
+    baseURL: options?.serverURL,
     path: path,
     headers: headers,
     query: query,

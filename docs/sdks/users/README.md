@@ -310,7 +310,7 @@ const discord = new Discord({
 
 async function run() {
   const result = await discord.users.updateMe({
-    username: "Merritt82",
+    username: "Neva.West",
   });
 
   // Handle the result
@@ -336,7 +336,7 @@ const discord = new DiscordCore({
 
 async function run() {
   const res = await usersUpdateMe(discord, {
-    username: "Merritt82",
+    username: "Neva.West",
   });
 
   if (!res.ok) {

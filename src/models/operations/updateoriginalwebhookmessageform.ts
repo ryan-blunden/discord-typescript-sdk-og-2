@@ -17,6 +17,7 @@ export type UpdateOriginalWebhookMessageFormRequest = {
   webhookId: string;
   webhookToken: string;
   threadId?: string | undefined;
+  withComponents?: boolean | undefined;
   incomingWebhookUpdateRequestPartial:
     components.IncomingWebhookUpdateRequestPartial;
 };
@@ -103,6 +104,7 @@ export const UpdateOriginalWebhookMessageFormRequest$inboundSchema: z.ZodType<
   webhook_id: z.string(),
   webhook_token: z.string(),
   thread_id: z.string().optional(),
+  with_components: z.boolean().optional(),
   IncomingWebhookUpdateRequestPartial:
     components.IncomingWebhookUpdateRequestPartial$inboundSchema,
 }).transform((v) => {
@@ -110,6 +112,7 @@ export const UpdateOriginalWebhookMessageFormRequest$inboundSchema: z.ZodType<
     "webhook_id": "webhookId",
     "webhook_token": "webhookToken",
     "thread_id": "threadId",
+    "with_components": "withComponents",
     "IncomingWebhookUpdateRequestPartial":
       "incomingWebhookUpdateRequestPartial",
   });
@@ -120,6 +123,7 @@ export type UpdateOriginalWebhookMessageFormRequest$Outbound = {
   webhook_id: string;
   webhook_token: string;
   thread_id?: string | undefined;
+  with_components?: boolean | undefined;
   IncomingWebhookUpdateRequestPartial:
     components.IncomingWebhookUpdateRequestPartial$Outbound;
 };
@@ -133,6 +137,7 @@ export const UpdateOriginalWebhookMessageFormRequest$outboundSchema: z.ZodType<
   webhookId: z.string(),
   webhookToken: z.string(),
   threadId: z.string().optional(),
+  withComponents: z.boolean().optional(),
   incomingWebhookUpdateRequestPartial:
     components.IncomingWebhookUpdateRequestPartial$outboundSchema,
 }).transform((v) => {
@@ -140,6 +145,7 @@ export const UpdateOriginalWebhookMessageFormRequest$outboundSchema: z.ZodType<
     webhookId: "webhook_id",
     webhookToken: "webhook_token",
     threadId: "thread_id",
+    withComponents: "with_components",
     incomingWebhookUpdateRequestPartial: "IncomingWebhookUpdateRequestPartial",
   });
 });
